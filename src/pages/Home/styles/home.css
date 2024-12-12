@@ -17,3 +17,17 @@
     
   }
   
+
+  .card {
+    width: 18rem; /* Tamaño estándar de una tarjeta */
+    margin: 10px auto; /* Centrar y añadir margen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto elegante */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Para que la imagen no sobresalga */
+  }
+  
+  .imgCard {
+    width: 100%; /* Asegura que ocupe el ancho completo del contenedor */
+    height: 200px; /* Tamaño fijo para uniformidad */
+    object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionar */
+  }

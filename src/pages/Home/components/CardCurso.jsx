@@ -5,8 +5,8 @@ function CardCurso({curso}) {
     
   return (
    
-        <div className="card">
-              <img src= {curso.imagen} className="card-img-top " alt="Imagen del curso de inglés nivel A1"/>
+        <div className="card mt-4">
+              <img src= {curso.imagen} className="card-img-top imgCard" alt="Imagen del curso de inglés nivel A1"/>
               <div className="card-body">
                 <h5 className="card-title text-center"> {curso.nombreCurso} </h5>
                 <p className="card-text"> {curso.descripcionBreve} </p>
