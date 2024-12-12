@@ -1,18 +1,22 @@
 import imagenIngles from "../assets/img/cursoIngles/ingles A1.jpg"
-import imagenIngles2 from "../assets/img/cursoIngles/ingles A2.avif"
+import imagenIngles2 from "../assets/img/cursoIngles/imagenIngles11.jpg"
 import imagenIngles3 from "../assets/img/cursoIngles/inglesintermedio.jpg"
 import imagenIngles4 from "../assets/img/cursoIngles/cursos-ingles-c1.jpg"
 import imagenFrances from "../assets/img/cursoFrances/lenguaje-frances A1.jpg"
 import imagenFrances2 from "../assets/img/cursoFrances/cursoIntensivo.jpg"
 import imagenFrances3 from "../assets/img/cursoFrances/Learning-French-Course.jpg"
 import imagenFrances4 from "../assets/img/cursoFrances/imagenFrancesC1.jpg"
+import imagenItaliano from "../assets/img/cursoItaliano/italianoA1.webp"
+import imagenItaliano2 from "../assets/img/cursoItaliano/italianoA2.png"
+import imagenItaliano3 from "../assets/img/cursoItaliano/italianoB1.webp"
+import imagenItaliano4 from "../assets/img/cursoItaliano/italianoC1.jpg"
 
 export const cursos = [
   {
     id: 1,
     categoria: "ingles",
     imagen: imagenIngles,
-    nombreCurso: "Ingles para principiantes- A1",
+    nombreCurso: "Ingles - A1",
     descriocionBreve: "Fácil aprendizaje.",
     duracion: "Clases online - 30 clases en 2 meses",
     info2: "Clases grupales",
@@ -52,7 +56,7 @@ export const cursos = [
     id: 5,
     categoria: "frances",
     imagen: imagenFrances,
-    nombreCurso: "Francés para principiantes- A1",
+    nombreCurso: "Francés - A1",
     descriocionBreve: "Fácil aprendizaje.",
     duracion: "Clases online - 30 clases en 2 meses",
     info2: "Clases grupales",
@@ -83,6 +87,46 @@ export const cursos = [
     categoria: "frances",
     imagen: imagenFrances4,
     nombreCurso: "Francés avanzado C1",
+    descriocionBreve: "Domina el inglés conversacional y habla con confianza.",
+    duracion: "Clases online - 35 clases en 3 meses",
+    info2: "Clases grupales",
+    precio: "49.000",
+  },
+  {
+    id: 9,
+    categoria: "italiano",
+    imagen: imagenItaliano,
+    nombreCurso: "Italiano - A1",
+    descriocionBreve: "Fácil aprendizaje.",
+    duracion: "Clases online - 30 clases en 2 meses",
+    info2: "Clases grupales",
+    precio: "30.000",
+  },
+  {
+    id: 10,
+    categoria: "italiano",
+    imagen: imagenItaliano2 ,
+    nombreCurso: "Italiano - A2",
+    descriocionBreve: "Curso intensivo de italiano.",
+    duracion: "Clases online - 25 clases en 2 meses",
+    info2: "Clases grupales",
+    precio: "35.000",
+  },
+  {
+    id: 11,
+    categoria: "italiano",
+    imagen: imagenItaliano3,
+    nombreCurso: "Italiano B1-B2",
+    descriocionBreve: "Curso intensivo.",
+    duracion: "Clases online - 56 clases en 6 meses",
+    info2: "Clases grupales",
+    precio: "70.000",
+  },
+  {
+    id: 12,
+    categoria: "italiano",
+    imagen: imagenItaliano4,
+    nombreCurso: "Italiano avanzado C1",
     descriocionBreve: "Domina el inglés conversacional y habla con confianza.",
     duracion: "Clases online - 35 clases en 3 meses",
     info2: "Clases grupales",

@@ -14,7 +14,7 @@ function ListaCursos() {
       </h4>
       <div>
         <h3 className="text-center mt-4">Inglés</h3>
-        <div className="d-flex justify-content-center">
+        <div className="d-md-flex">
         {cursos.filter((curso) => curso.categoria == "ingles"  ).map((curso) => (
           <CardCurso key={curso.id} curso={curso}></CardCurso>
         ))}
@@ -22,8 +22,16 @@ function ListaCursos() {
       </div>
       <div>
         <h3 className="text-center mt-4">Francés</h3>
-        <div className="d-flex justify-content-center">
+        <div className="d-md-flex">
         {cursos.filter((curso) => curso.categoria == "frances"  ).map((curso) => (
+          <CardCurso key={curso.id} curso={curso}></CardCurso>
+        ))}
+      </div>
+      </div>
+      <div>
+        <h3 className="text-center mt-4">Italiano</h3>
+        <div className="d-md-flex">
+        {cursos.filter((curso) => curso.categoria == "italiano"  ).map((curso) => (
           <CardCurso key={curso.id} curso={curso}></CardCurso>
         ))}
       </div>
