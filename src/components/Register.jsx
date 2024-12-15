@@ -4,6 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import imagenregister from "../assets/img/imagenregister.webp";
 
+
 function Register() {
   return (
     <>
@@ -29,15 +30,15 @@ function Register() {
                 <h3 className="text-center">Registro</h3>
 
                 <div className="mb-3">
-               
-               <label className="form-label">Nombre y Apellido</label>
-               <input
-                 type="text"
-                 name="usuario"
-                 className="casilla form-control"
-                 placeholder="Enzo Perez"
-               />
-             </div>
+                
+                <label className="form-label">Nombre y Apellido</label>
+                <input
+                  type="text"
+                  name="usuario"
+                  className="casilla form-control"
+                  placeholder="Enzo Perez"
+                />
+              </div>
 
              
                 <label className="form-label">Usuario</label>
@@ -84,6 +85,9 @@ function Register() {
                 <button type="submit" className="btn btn-secondary w-100">
                   Ingresar
                 </button>
+               
+
+
              
               </div>
     
