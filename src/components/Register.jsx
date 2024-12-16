@@ -24,7 +24,7 @@ function Register() {
   const handleChange =(e) =>{
     setFormulario({
       ...formulario,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value === "check" ? e.target.checked : e.target.value,
     })
   }
 
