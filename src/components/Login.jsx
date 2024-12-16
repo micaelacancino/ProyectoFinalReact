@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../styles/login.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
@@ -6,6 +6,13 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import imagenlogin from "../assets/img/imagenlogin.webp";
 
 function Login() {
+
+  const [email, setEmail] = useState("");
+  console.log(email)
+
+  const [constraseña, setContraseña] = useState("");
+  console.log(constraseña)
+
   return (
     <>
       <section class="container my-5">
@@ -26,12 +33,15 @@ function Login() {
             <form class="formregistro px-3 px-md-4 py-3 shadow rounded-2">
             <div className="mb-3">
             <h3 className="text-center">Inicio de sesión</h3>
-            <label className="form-label">Usuario</label>
+            <label className="form-label">Email</label>
             <input
-              type="text"
-              name="usuario"
-              className="casilla form-control"
-              placeholder="Ingrese su nombre de usuario"
+              type="email"
+              name="email"
+              className=" form-control"
+              placeholder="Ingrese su email"
+              onChange={(e) => 
+                setEmail(e.target.value)
+               }
             />
           </div>
 
@@ -40,8 +50,11 @@ function Login() {
             <input
               type="password"
               name="contraseña"
-              className="casilla form-control"
+              className=" form-control"
               placeholder="Ingrese su contraseña"
+              onChange={(e) => 
+                setContraseña(e.target.value)
+               }
             />
           </div>
 
