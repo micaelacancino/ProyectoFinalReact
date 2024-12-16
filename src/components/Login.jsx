@@ -1,17 +1,45 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../styles/login.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import imagenlogin from "../assets/img/imagenlogin.webp";
+import { obtenerUsuarios } from '../database';
+import { Navigate } from 'react-router-dom';
 
 function Login() {
 
   const [email, setEmail] = useState("");
-  console.log(email)
+  const [contraseña, setContraseña] = useState("");
+  const [usuarios, setUsuarios] = useState([]);
 
-  const [constraseña, setContraseña] = useState("");
-  console.log(constraseña)
+
+  useEffect (()=>{
+    
+   const usuariosLocal = obtenerUsuarios();
+   setUsuarios(usuariosLocal);
+
+  },[])
+  // console.log(usuarios)
+
+  
+
+
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+
+    // console.log(email,contraseña);
+
+    const usuarioEncontrado = usuarios.find(usuario => usuario.email == email && usuario.contraseña == contraseña);
+    console.log(usuarioEncontrado);
+
+    if(usuarioEncontrado){
+      console.log('Usuario encontrado:', usuarioEncontrado);
+      sessionStorage.setItem("sesion", JSON.stringify(usuarioEncontrado))
+      
+    }
+
+  }
 
   return (
     <>
@@ -30,7 +58,7 @@ function Login() {
           <div
             class="contenedorregistro col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center"
           >
-            <form class="formregistro px-3 px-md-4 py-3 shadow rounded-2">
+            <form class="formregistro px-3 px-md-4 py-3 shadow rounded-2"  onSubmit={handleSubmit} >
             <div className="mb-3">
             <h3 className="text-center">Inicio de sesión</h3>
             <label className="form-label">Email</label>
@@ -41,7 +69,7 @@ function Login() {
               placeholder="Ingrese su email"
               onChange={(e) => 
                 setEmail(e.target.value)
-               }
+              }
             />
           </div>
 
