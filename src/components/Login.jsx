@@ -81,8 +81,8 @@ function Login() {
               className=" form-control"
               placeholder="Ingrese su contraseña"
               onChange={(e) => 
-                setContraseña(e.target.value)
-               }
+              setContraseña(e.target.value)
+              }
             />
           </div>
 
