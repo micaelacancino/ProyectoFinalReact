@@ -4,28 +4,30 @@ import ListaCursos from "./components/ListaCursos";
 import  "./styles/home.css"
 import idiomas from "../../assets/img/idiomas.jpg"
 import ListaReseñas from "./components/ListaReseñas";
+import FiltroCurso from "./components/FiltroCurso";
+
 
 function HomePage() {
   return (
-    <section className="w-100 d-flex flex-column">
+    <section className="d-flex flex-column ">
       <BannerHome></BannerHome>
       <div className="container containerInfo mb-5">
-        <article className="row justify-content-center mt-5 containerIdioma">
+        <article className="row justify-content-center mt-5">
           <div className="col-12 col-md-6">
-            <h2 className="text-center my-5">
+            <h2 className="text-center my-5 titlePages">
               ¿Te gustaría aprender un nuevo idioma?
             </h2>
-            <h3 className="text-center mb-4">
+            <p className="text-center mb-4 fs-5">
               Amplía tus horizontes con nuestros cursos de idiomas. Descubre el
               placer de aprender inglés, francés e italiano con nuestro programa
               diseñado para todas las edades y niveles.
-            </h3>
-            <h3 className="text-center mt-5">
+            </p>
+            <p className="text-center mt-5 fs-5">
               ¡Da el primer paso hacia un futuro multilingüe! 🌎 Inscríbete
               ahora y descubre lo que puedes lograr.
-            </h3>
+            </p>
           </div>
-          <div className="col-12 col-md-6 d-flex justify-content-center">
+          <div className="col-12 col-md-6 d-flex justify-content-center pb-5 imgIdiomas">
             <img
               className="w-100"
               src= {idiomas}
@@ -33,11 +35,17 @@ function HomePage() {
             />
           </div>
         </article>
-        <ListaCursos></ListaCursos>
-        <h3 className="my-5 text-center">
-        ALUMNOS Y ALUMNAS QUE NOS APOYAN Y RECOMIENDAN</h3>
+        </div>
+     
+        <div className="container">
+        <FiltroCurso></FiltroCurso>
+      
+        </div>
+        <h3 className="mt-5 pt-5 text-center titlePages">
+        ALUMNOS QUE NOS APOYAN Y RECOMIENDAN</h3>
         <ListaReseñas></ListaReseñas>
-      </div>
+        
+     
     </section>
   );
 }
