@@ -35,15 +35,28 @@ function HomePage() {
             />
           </div>
         </article>
+        
         </div>
-     
+        <h3 className="mt-3 pt-5 text-center titlePages">
+        ALUMNOS QUE NOS APOYAN Y RECOMIENDAN</h3>
+        <ListaReseñas></ListaReseñas>
+        
         <div className="container">
+        <div className="containerSubtitulo">
+          <h2 className="text-center my-4 titlePages">Nuestros cursos</h2>
+          <p className="text-center mb-5 fs-5">
+            "Ofrecemos una amplia variedad de cursos diseñados para
+            principiantes, estudiantes avanzados y personas de todas las
+            edades."
+          </p>
+        </div>
         <FiltroCurso></FiltroCurso>
       
         </div>
-        <h3 className="mt-5 pt-5 text-center titlePages">
-        ALUMNOS QUE NOS APOYAN Y RECOMIENDAN</h3>
-        <ListaReseñas></ListaReseñas>
+        
+  
+
+      
         
      
     </section>

@@ -24,4 +24,5 @@ export const reseñas = [
         estrellas: "⭐⭐⭐⭐⭐",
         comentario: "Perfecto para aprender desde cero. Súper recomendable."
       },
+      
 ]

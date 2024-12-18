@@ -2,12 +2,18 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { cursos } from "../../../helpers/cursos";
 import ListaCursos from "./ListaCursos";
+import FiltroCategoria from "./FiltroCategoria";
 
 function FiltroCurso() {
   const [busqueda, setBusqueda] = useState("");
   const [cursosFiltrados, setCursosFiltrados] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   const filtrarCursosPorNombre = () => {
+   
+   if(selectedCategory !== ""){
+    setSelectedCategory("")
+   } 
     const inputBusqueda = busqueda.toLowerCase().trim();
 
     if (inputBusqueda === "") {
@@ -26,6 +32,7 @@ function FiltroCurso() {
   console.log(busqueda);
   return (
     <>
+
     <div className="mb-5 text-center">
       <form>
         <input
@@ -39,7 +46,16 @@ function FiltroCurso() {
         />
       </form>
     </div>
-    <ListaCursos busqueda={busqueda} cursosFiltrados={cursosFiltrados} ></ListaCursos>
+    <section class="container mt-5">  
+      <article class="row">
+      <div class="col-12 col-md-3">
+        <FiltroCategoria  selectedCategory={selectedCategory}  setSelectedCategory={setSelectedCategory} setBusqueda={setBusqueda} ></FiltroCategoria> </div>
+      <div class="col-12 col-md-9 d-flex flex-column">
+      <ListaCursos  busqueda={busqueda} cursosFiltrados={cursosFiltrados} selectedCategory={selectedCategory} ></ListaCursos>
+         </div>
+      </article>
+      </section>
+
     </>
   );
 }

@@ -2,39 +2,25 @@ import React, { useState } from "react";
 import { cursos } from "../../../helpers/cursos";
 import CardCurso from "./CardCurso";
 
-function ListaCursos({ busqueda, cursosFiltrados }) {
+function ListaCursos({ busqueda, cursosFiltrados, selectedCategory }) {
   const [cursosAlmacenados, setCursosAlmacenados] = useState(cursos);
 
   return (
     <>
       <div className="mt-5">
-        <div className="containerSubtitulo">
-          <h2 className="text-center my-4 titlePages">Nuestros cursos</h2>
-          <p className="text-center mb-5 fs-5">
-            "Ofrecemos una amplia variedad de cursos diseñados para
-            principiantes, estudiantes avanzados y personas de todas las
-            edades."
-          </p>
-        </div>
-        {busqueda === "" && (
-          <div className="my-3">
-            <h3 className="text-center mt-4 titlePages">Inglés</h3>
-            <div className="d-md-flex">
-              {cursosAlmacenados
-                .filter((curso) => curso.categoria == "ingles")
-                .map((curso) => (
-                  <CardCurso key={curso.id} curso={curso}></CardCurso>
-                ))}
-            </div>
+        {busqueda === "" && selectedCategory === "" && (
+          <div className="">
+            {cursosAlmacenados.map((curso) => (
+              <CardCurso key={curso.id} curso={curso}></CardCurso>
+            ))}
           </div>
         )}
 
-        {busqueda === "" && (
-          <div className="my-5">
-            <h3 className="text-center my-4 titlePages">Francés</h3>
-            <div className="d-md-flex">
+        {selectedCategory === "frances" && (
+          <div className="">
+            <div className="">
               {cursos
-                .filter((curso) => curso.categoria == "frances")
+                .filter((curso) => curso.categoria == selectedCategory)
                 .map((curso) => (
                   <CardCurso key={curso.id} curso={curso}></CardCurso>
                 ))}
@@ -42,9 +28,33 @@ function ListaCursos({ busqueda, cursosFiltrados }) {
           </div>
         )}
 
-        {busqueda === "" && (
+        {selectedCategory === "ingles" && (
+          <div className="">
+            <div className="">
+              {cursos
+                .filter((curso) => curso.categoria == selectedCategory)
+                .map((curso) => (
+                  <CardCurso key={curso.id} curso={curso}></CardCurso>
+                ))}
+            </div>
+          </div>
+        )}
+
+        {selectedCategory === "italiano" && (
+          <div className="">
+            <div className="">
+              {cursos
+                .filter((curso) => curso.categoria == selectedCategory)
+                .map((curso) => (
+                  <CardCurso key={curso.id} curso={curso}></CardCurso>
+                ))}
+            </div>
+          </div>
+        )}
+
+        {/* {busqueda === "" && (
           <div>
-            <h3 className="text-center my-4 titlePages">Italiano</h3>
+        
             <div className="d-md-flex">
               {cursosAlmacenados
                 .filter((curso) => curso.categoria == "italiano")
@@ -53,10 +63,10 @@ function ListaCursos({ busqueda, cursosFiltrados }) {
                 ))}
             </div>
           </div>
-        )}
+        )}  */}
 
-        {cursosFiltrados.length > 0 && busqueda !== "" && (
-          <div className="d-md-flex">
+        {cursosFiltrados.length > 0 && busqueda !== "" && selectedCategory === "" && (
+          <div className="">
             {cursosFiltrados.map((curso) => (
               <CardCurso key={curso.id} curso={curso}></CardCurso>
             ))}

@@ -17,19 +17,18 @@ export const cursos = [
     categoria: "ingles",
     imagen: imagenIngles,
     nombreCurso: "Ingles - A1",
-    descriocionBreve: "Fácil aprendizaje.",
-    duracion: "Clases online - 30 clases en 2 meses",
-    info2: "Clases grupales",
-    precio: "Precio: $ 30.000",
+    descripcionBreve: " Este curso está diseñado para aquellos que desean iniciar su camino en el aprendizaje del idioma inglés.",
+    duracion: "Duración: 30 clases | Modalidad: Online",
+    precio: " $ 30.000",
   },
   {
     id: 2,
     categoria: "ingles",
     imagen: imagenIngles2,
     nombreCurso: "Ingles A2",
-    descriocionBreve: "Curso intensivo de inglés.",
+    descripcionBreve: "Curso intensivo de inglés.",
     duracion: "Clases online - 25 clases en 2 meses",
-    info2: "Clases grupales",
+  
     precio: "Precio: $35.000",
   },
   {
@@ -37,9 +36,9 @@ export const cursos = [
     categoria: "ingles",
     imagen: imagenIngles3,
     nombreCurso: "Ingles avanzado B1-B2",
-    descriocionBreve: "Curso intensivo.",
+    descripcionBreve: "Curso intensivo.",
     duracion: "Clases online - 56 clases en 6 meses",
-    info2: "Clases grupales",
+  
     precio: "Precio: $70.000",
   },
   {
@@ -47,9 +46,9 @@ export const cursos = [
     categoria: "ingles",
     imagen: imagenIngles4,
     nombreCurso: "Ingles avanzado C1",
-    descriocionBreve: "Domina el inglés conversacional y habla con confianza.",
+    descripcionBreve: "Domina el inglés conversacional y habla con confianza.",
     duracion: "Clases online - 35 clases en 3 meses",
-    info2: "Clases grupales",
+  
     precio: "Precio: $49.000",
   },
   {
@@ -57,9 +56,9 @@ export const cursos = [
     categoria: "frances",
     imagen: imagenFrances,
     nombreCurso: "Frances - A1",
-    descriocionBreve: "Fácil aprendizaje.",
+    descripcionBreve: "Fácil aprendizaje.",
     duracion: "Clases online - 30 clases en 2 meses",
-    info2: "Clases grupales",
+  
     precio: "Precio: $30.000",
   },
   {
@@ -67,9 +66,9 @@ export const cursos = [
     categoria: "frances",
     imagen: imagenFrances2,
     nombreCurso: "Frances - A2",
-    descriocionBreve: "Curso intensivo de inglés.",
+    descripcionBreve: "Curso intensivo de inglés.",
     duracion: "Clases online - 25 clases en 2 meses",
-    info2: "Clases grupales",
+  
     precio: "Precio: $35.000",
   },
   {
@@ -77,9 +76,9 @@ export const cursos = [
     categoria: "frances",
     imagen: imagenFrances3,
     nombreCurso: "Frances B1-B2",
-    descriocionBreve: "Curso intensivo.",
+    descripcionBreve: "Curso intensivo.",
     duracion: "Clases online - 56 clases en 6 meses",
-    info2: "Clases grupales",
+  
     precio: "Precio: $70.000",
   },
   {
@@ -87,9 +86,9 @@ export const cursos = [
     categoria: "frances",
     imagen: imagenFrances4,
     nombreCurso: "Frances avanzado C1",
-    descriocionBreve: "Domina el inglés conversacional y habla con confianza.",
+    descripcionBreve: "Domina el inglés conversacional y habla con confianza.",
     duracion: "Clases online - 35 clases en 3 meses",
-    info2: "Clases grupales",
+  
     precio: "Precio: $49.000",
   },
   {
@@ -97,9 +96,9 @@ export const cursos = [
     categoria: "italiano",
     imagen: imagenItaliano,
     nombreCurso: "Italiano - A1",
-    descriocionBreve: "Fácil aprendizaje.",
+    descripcionBreve: "Fácil aprendizaje.",
     duracion: "Clases online - 30 clases en 2 meses",
-    info2: "Clases grupales",
+  
     precio: "Precio: $30.000",
   },
   {
@@ -107,9 +106,9 @@ export const cursos = [
     categoria: "italiano",
     imagen: imagenItaliano2 ,
     nombreCurso: "Italiano - A2",
-    descriocionBreve: "Curso intensivo de italiano.",
+    descripcionBreve: "Curso intensivo de italiano.",
     duracion: "Clases online - 25 clases en 2 meses",
-    info2: "Clases grupales",
+  
     precio: "Precio: $35.000",
   },
   {
@@ -117,9 +116,9 @@ export const cursos = [
     categoria: "italiano",
     imagen: imagenItaliano3,
     nombreCurso: "Italiano B1-B2",
-    descriocionBreve: "Curso intensivo.",
+    descripcionBreve: "Curso intensivo.",
     duracion: "Clases online - 56 clases en 6 meses",
-    info2: "Clases grupales",
+  
     precio: "Precio: $70.000",
   },
   {
@@ -127,9 +126,9 @@ export const cursos = [
     categoria: "italiano",
     imagen: imagenItaliano4,
     nombreCurso: "Italiano avanzado C1",
-    descriocionBreve: "Domina el inglés conversacional y habla con confianza.",
+    descripcionBreve: "Domina el inglés conversacional y habla con confianza.",
     duracion: "Clases online - 35 clases en 3 meses",
-    info2: "Clases grupales",
+  
     precio: "Precio: $49.000",
   },
   
