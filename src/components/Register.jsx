@@ -152,7 +152,7 @@ function Register() {
               onChange={handleChange}
               
               />
-            <label className="form-check-label text-body-secondary  ">
+            <label className="form-check-label text-body-secondary  " >
               Acepto la Política de Privacidad y los Términos del Servicio
             </label>
             </div>
