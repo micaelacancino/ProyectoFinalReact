@@ -31,12 +31,21 @@ function Register() {
   const handleSubmit =(e) => {
     e.preventDefault();
 
+    if (
+      !formulario.nombre.trim() ||
+      !formulario.usuario.trim() ||
+      !formulario.email.trim() ||
+      !formulario.contraseña.trim() ||
+      !formulario.confirmarContraseña.trim()
+    ) {
+      alert("Debe completar todos los campos obligatorios.");
+      return; // Detiene el envío si hay campos vacíos
+    }
+
     if(!formulario.email=== "" || !formulario.usuario==="" || !formulario.email==="" || !formulario.contraseña || !formulario.confirmarContraseña ){
       alert("debe completar los campos obligatorios!")
     }
-    if(!formulario.check){
-      alert("Debe aceptar los terminos y condiciones!")
-    }
+    
 
     if(formulario.contraseña.length < 5){
       alert("la contraseña debe contener mas caracteres")
@@ -45,6 +54,10 @@ function Register() {
     if (formulario.contraseña !== formulario.confirmarContraseña) {
       alert("Las contraseñas no coinciden.");
      
+    }
+
+    if(!formulario.check){
+      alert("Debe aceptar los terminos y condiciones!");
     }
     
     agregarUsuario(formulario);
