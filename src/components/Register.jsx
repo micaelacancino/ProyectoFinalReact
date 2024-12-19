@@ -65,7 +65,11 @@ function Register() {
     alert("Usuario registrado correctamente.");
     console.log(obtenerUsuarios());
 
-    
+    Swal.fire({
+          icon: 'success',
+          title: '¡Éxito!',
+          text: 'Los datos se registraron correctamente.',
+        });
 
     
   }

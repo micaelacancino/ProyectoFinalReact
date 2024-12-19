@@ -36,8 +36,24 @@ function Login() {
     if(usuarioEncontrado){
       console.log('Usuario encontrado:', usuarioEncontrado);
       sessionStorage.setItem("sesion", JSON.stringify(usuarioEncontrado))
+
+      
       
     }
+
+    const usuarioAdmin= usuarios.find(usuario => usuario.email == "admin" && usuario.contraseña == "admin" )
+
+    if(usuarioAdmin){
+      Swal.fire({
+            icon: 'success',
+            title: '¡Éxito!',
+            text: 'Bienvenido Admin',
+          });
+
+    Navigate("/admin");
+    }
+
+    
 
   }
 
