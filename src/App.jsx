@@ -1,5 +1,7 @@
 
 
+import Footer from "./components/Footer"
+
 //import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomePage from "./pages/Home/HomePage";
@@ -17,7 +19,7 @@ function App() {
     setCursosAlmacenados(cursosGuardados);
   }, []);
 
- 
+
     return (
       <>
         <BrowserRouter>
@@ -34,6 +36,7 @@ function App() {
               element={<DetalleCurso cursosAlmacenados={cursosAlmacenados}></DetalleCurso>}
             />
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </>
     );
