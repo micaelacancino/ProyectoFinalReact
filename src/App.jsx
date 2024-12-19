@@ -1,6 +1,7 @@
 
 
 import Footer from "./components/Footer"
+
 //import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomePage from "./pages/Home/HomePage";
@@ -9,7 +10,7 @@ import { obtenerCursos } from "./helpers/bdLocal";
 import DetalleCurso from "./pages/Home/detalleCurso/DetalleCurso";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
+import NavBar from "./components/NavBar"
 function App() {
   const [cursosAlmacenados, setCursosAlmacenados] = useState([]);
 
@@ -18,10 +19,11 @@ function App() {
     setCursosAlmacenados(cursosGuardados);
   }, []);
 
- 
+
     return (
       <>
         <BrowserRouter>
+        <NavBar/>
           <Routes>
             <Route
               path="/"
@@ -44,6 +46,4 @@ function App() {
 
 
 export default App;
-
-
 
