@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import "../styles/login.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import imagenlogin from "../assets/img/imagenlogin.webp";
 import { obtenerUsuarios } from '../database';
 import { Navigate } from 'react-router-dom';
+
 
 function Login() {
 
@@ -20,7 +20,7 @@ function Login() {
    setUsuarios(usuariosLocal);
 
   },[])
-  // console.log(usuarios)
+
 
   
 
@@ -28,7 +28,6 @@ function Login() {
   const handleSubmit = (e)=>{
     e.preventDefault();
 
-    // console.log(email,contraseña);
 
     const usuarioEncontrado = usuarios.find(usuario => usuario.email == email && usuario.contraseña == contraseña);
     console.log(usuarioEncontrado);
