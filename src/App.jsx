@@ -1,19 +1,49 @@
+
+
+import Footer from "./components/Footer"
+
 //import './App.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import HomePage from "./pages/Home/HomePage";
+import { useEffect, useState } from "react";
+import { obtenerCursos } from "./helpers/bdLocal";
+import DetalleCurso from "./pages/Home/detalleCurso/DetalleCurso";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Login from "./components/login"
-
-
-// import Register from "./components/register"
-
+import NavBar from "./components/NavBar"
 function App() {
- 
+  const [cursosAlmacenados, setCursosAlmacenados] = useState([]);
 
-  return (
-    <>
-    <Login/>
-    {/* <Register/> */}
-    </>
-  )
-}
+  useEffect(() => {
+    const cursosGuardados = obtenerCursos();
+    setCursosAlmacenados(cursosGuardados);
+  }, []);
 
-export default App
+
+    return (
+      <>
+        <BrowserRouter>
+        <NavBar/>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <HomePage cursosAlmacenados={cursosAlmacenados}></HomePage>
+              }
+            />
+            <Route
+              path="/detalleCurso/:id"
+              element={<DetalleCurso cursosAlmacenados={cursosAlmacenados}></DetalleCurso>}
+            />
+          </Routes>
+          <Footer/>
+        </BrowserRouter>
+      </>
+    );
+  }
+  
+
+
+
+export default App;
+
