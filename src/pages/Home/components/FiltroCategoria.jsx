@@ -8,7 +8,7 @@ function FiltroCategoria({selectedCategory, setSelectedCategory, setBusqueda }) 
     setSelectedCategory(event.target.value);
   };
   return (
-    <div>
+    <div className="mt-4 text-center">
       <h5>Categorías</h5>
       <select
         value={selectedCategory}

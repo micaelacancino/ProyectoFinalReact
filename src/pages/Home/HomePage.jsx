@@ -1,13 +1,12 @@
 import React from "react";
 import BannerHome from "./components/BannerHome";
 import ListaCursos from "./components/ListaCursos";
-import  "./styles/home.css"
-import idiomas from "../../assets/img/idiomas.jpg"
+import "./styles/home.css";
+import idiomas from "../../assets/img/idiomas.jpg";
 import ListaReseñas from "./components/ListaReseñas";
 import FiltroCurso from "./components/FiltroCurso";
 
-
-function HomePage() {
+function HomePage({cursosAlmacenados} ) {
   return (
     <section className="d-flex flex-column ">
       <BannerHome></BannerHome>
@@ -28,37 +27,25 @@ function HomePage() {
             </p>
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center pb-5 imgIdiomas">
-            <img
-              className="w-100"
-              src= {idiomas}
-              alt="imagen de idiomas"
-            />
+            <img className="w-100" src={idiomas} alt="imagen de idiomas" />
           </div>
         </article>
-        
-        </div>
-        <h3 className="mt-3 pt-5 text-center titlePages">
-        ALUMNOS QUE NOS APOYAN Y RECOMIENDAN</h3>
-        <ListaReseñas></ListaReseñas>
-        
-        <div className="container">
-        <div className="containerSubtitulo">
-          <h2 className="text-center my-4 titlePages">Nuestros cursos</h2>
-          <p className="text-center mb-5 fs-5">
+      </div>
+      <h3 className="mt-3 pt-5 text-center titlePages">
+        ALUMNOS QUE NOS APOYAN Y RECOMIENDAN
+      </h3>
+      <ListaReseñas></ListaReseñas>
+      <div className="container">
+        <div className="containerSubtitulo mt-5 p-1">
+          <h2 className="text-center my-5 titlePages">Nuestros cursos</h2>
+          <p className="text-center mb-5 fs-5 fw-bold">
             "Ofrecemos una amplia variedad de cursos diseñados para
             principiantes, estudiantes avanzados y personas de todas las
             edades."
           </p>
         </div>
-        <FiltroCurso></FiltroCurso>
-      
-        </div>
-        
-  
-
-      
-        
-     
+        <FiltroCurso cursosAlmacenados={cursosAlmacenados}></FiltroCurso>
+      </div>
     </section>
   );
 }

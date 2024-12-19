@@ -1,33 +1,3 @@
-// import React from 'react'
-
-// function ReseñaUsuario( {reseña}) {
-//   return (
-
-
-//       <div className="  gap-2">
-//         <div className="imgUser">
-//           <img
-//             src= {reseña.imagen}
-//             className="rounded-circle"
-//             alt="usuario3"
-//           />
-//         </div>
-//         <p>{ reseña.estrellas}  </p>
-//         <div>
-//           <p>{reseña.nombreyApellido} </p>
-          
-//           <p>
-//             { reseña.comentario}
-//           </p>
-//         </div>
-//       </div>
-
-//   )
-// }
-
-// export default ReseñaUsuario
-
-
 import React from 'react';
 
 function ReseñaUsuario({ reseña }) {

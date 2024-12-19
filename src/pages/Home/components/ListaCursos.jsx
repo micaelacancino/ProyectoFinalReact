@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { cursos } from "../../../helpers/cursos";
 import CardCurso from "./CardCurso";
 
-function ListaCursos({ busqueda, cursosFiltrados, selectedCategory }) {
-  const [cursosAlmacenados, setCursosAlmacenados] = useState(cursos);
-
+function ListaCursos({
+  busqueda,
+  cursosFiltrados,
+  selectedCategory,
+  cursosAlmacenados,
+}) {
   return (
     <>
       <div className="mt-5">
@@ -52,20 +55,7 @@ function ListaCursos({ busqueda, cursosFiltrados, selectedCategory }) {
           </div>
         )}
 
-        {/* {busqueda === "" && (
-          <div>
-        
-            <div className="d-md-flex">
-              {cursosAlmacenados
-                .filter((curso) => curso.categoria == "italiano")
-                .map((curso) => (
-                  <CardCurso key={curso.id} curso={curso}></CardCurso>
-                ))}
-            </div>
-          </div>
-        )}  */}
-
-        {cursosFiltrados.length > 0 && busqueda !== "" && selectedCategory === "" && (
+        {cursosFiltrados.length > 0 && busqueda !== "" && (
           <div className="">
             {cursosFiltrados.map((curso) => (
               <CardCurso key={curso.id} curso={curso}></CardCurso>

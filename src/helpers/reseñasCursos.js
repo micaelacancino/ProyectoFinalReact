@@ -25,4 +25,5 @@ export const reseñas = [
         comentario: "Perfecto para aprender desde cero. Súper recomendable."
       },
       
+      
 ]
