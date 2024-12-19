@@ -4,6 +4,7 @@ import Admin from "./components/Admin.jsx";
 import Register from "./components/Register.jsx";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
+
 function App() {
   return (
     <Router>
