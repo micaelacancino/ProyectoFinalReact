@@ -13,17 +13,14 @@ const curso = cursosAlmacenados.find(c =>  id == c.id )
       <article class="row align-items-center">
         <div class="col-12 col-md-8 text-center text-md-start">
           <h2>{curso.nombreCurso}</h2>
-          <h4 class="my-4 text-start">
-            Aprende todo sobre el idioma inglés: fonética, gramática,
-            vocabulario y más.
-          </h4>
+          <h4 class="my-4 text-start">{curso.descripcionBreve}</h4>
 
           <div class="card p-4 shadow-sm mt-4">
             <h3 class="fw-bold mb-4">Este curso incluye:</h3>
             <ul class="list-unstyled">
               <li class="mb-2">
                 <i class="bi bi-camera-video me-2"></i>
-                <strong>115 horas de vídeo bajo demanda</strong>
+                <strong>68 horas de vídeo bajo demanda</strong>
               </li>
               <li class="mb-2">
                 <i class="bi bi-download me-2"></i>
@@ -38,11 +35,11 @@ const curso = cursosAlmacenados.find(c =>  id == c.id )
                 <strong>Certificado de finalización</strong>
               </li>
               <li class="mt-5 ms-2">
-                <h4>Precio $30.000</h4>
+                <h4>{curso.precio} </h4>
               </li>
             </ul>
             <div class="d-flex justify-content-end">
-              <button type="button" class="btn btn-outline-secondary">
+              <button type="button" class="btn btn-secondary">
                 Agregar al carrito
               </button>
             </div>
@@ -51,7 +48,7 @@ const curso = cursosAlmacenados.find(c =>  id == c.id )
 
         <div class="col-12 col-md-4 text-center mt-5 pt-4">
           <img
-            src="/OIP (1).jpg"
+            src={curso.imagen}
             alt="Curso de Inglés"
             class="img-fluid rounded shadow-sm"
           />
@@ -65,17 +62,17 @@ const curso = cursosAlmacenados.find(c =>  id == c.id )
 
         <div class="row">
           <div class="col-md-4">
-            <p>✓ Inglés básico, intermedio y avanzado</p>
+            <p>✓ correcta pronunciación </p>
             <p>✓ fonética</p>
           </div>
 
           <div class="col-md-4">
             <p>✓ gramática</p>
-            <p>✓ correcta pronunciación</p>
+            <p>✓ comprensión auditiva.</p>
           </div>
           <div class="col-md-4">
-            <p>✓ gramática</p>
-            <p>✓ correcta pronunciación</p>
+            <p>✓ expresiones comunes.</p>
+            <p>✓ vocabulario clave </p>
           </div>
         </div>
       </div>
