@@ -21,6 +21,7 @@ function App() {
     return (
       <>
         <BrowserRouter>
+        <NavBar/>
           <Routes>
             <Route
               path="/"
