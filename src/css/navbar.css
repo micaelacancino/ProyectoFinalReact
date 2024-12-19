@@ -1,0 +1,15 @@
+nav{
+    background-color:rgb(173, 69, 34);
+  }
+  
+  .jost{
+  font-size: 21px;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:100px;
+  font-style: normal;
+  }
+  .logohead{
+  width: 23vh;
+  height: 15vh;
+  }
