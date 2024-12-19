@@ -1,28 +1,19 @@
-//import './App.css'
-import "./styles/login.css"
-import Login from "./components/Login";
-import Admin from "./components/Admin";
-import Register from "./components/register"
+import "./styles/login.css";
+import Login from "./components/Login.jsx";
+import Admin from "./components/Admin.jsx";
+import Register from "./components/Register.jsx";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 function App() {
- 
-
   return (
-    <>
-     <Router>
+    <Router>
       <Routes>
-        {/* Ruta para Admin */}
-        <Route path="/admin" element={<Admin />} />
-
-        {/* Ruta para Login */}
+        <Route path="/" element={<Admin />} />
         <Route path="/login" element={<Login />} />
-
-        {/* Ruta para Register */}
-        <Route path="/register" element={<Register />} />
+        <Route path="/registro" element={<Register />} />
       </Routes>
     </Router>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;

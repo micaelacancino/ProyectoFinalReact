@@ -1,5 +1,7 @@
 let usuarios = JSON.parse(localStorage.getItem("userData")) || [];
 
+localStorage.removeItem("userData");
+
 
 export const agregarUsuario = (usuario) => {
   usuarios.push(usuario);

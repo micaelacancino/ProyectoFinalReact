@@ -19,6 +19,8 @@ function Register() {
     check: false,
   });
 
+
+
   
 
   const handleChange =(e) =>{
@@ -30,6 +32,7 @@ function Register() {
 
   const handleSubmit =(e) => {
     e.preventDefault();
+    
 
     if(!formulario.email=== "" || !formulario.usuario==="" || !formulario.email==="" || !formulario.contraseña || !formulario.confirmarContraseña ){
       alert("debe completar los campos obligatorios!")
@@ -52,7 +55,7 @@ function Register() {
     alert("Usuario registrado correctamente.");
     console.log(obtenerUsuarios());
 
-    
+    console.log(localStorage.getItem("userData"));
 
     
   }
