@@ -1,14 +1,35 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { agregarCursoCarrito, guardarCarrito } from "../../helpers/bdLocal";
 
-function DetalleCurso({cursosAlmacenados}) {
+function DetalleCurso({
+  cursosAlmacenados,
+  carrito,
+  setCarrito,
+  usuarioLogueado,
+}) {
+  const { id } = useParams();
 
-const {id} =  useParams();
+  const curso = cursosAlmacenados.find((c) => id == c.id);
 
-const curso = cursosAlmacenados.find(c =>  id == c.id )
+  const navegacion = useNavigate()
 
-  return (
-    <section class="container">
+  const agregarCurso = () => {
+    if (!usuarioLogueado) {
+      console.log("debe iniciar sesion para realizar una compra");
+      return;
+    } else {
+      const carritoAux = carrito;
+      const carritoActual = agregarCursoCarrito(curso, carritoAux);
+      setCarrito(carritoActual);
+      guardarCarrito(carritoActual);
+      navegacion("/carrito")
+    }
+  };
+
+
+return (
+  <section class="container">
     <div class="container mt-5">
       <article class="row align-items-center">
         <div class="col-12 col-md-8 text-center text-md-start">
@@ -39,7 +60,7 @@ const curso = cursosAlmacenados.find(c =>  id == c.id )
               </li>
             </ul>
             <div class="d-flex justify-content-end">
-              <button type="button" class="btn btn-secondary">
+              <button type="button" class="btn btn-secondary"  onClick={agregarCurso} >
                 Agregar al carrito
               </button>
             </div>
@@ -78,7 +99,6 @@ const curso = cursosAlmacenados.find(c =>  id == c.id )
       </div>
     </div>
   </section>
-  )
-}
-
-export default DetalleCurso
+);
+ }
+export default DetalleCurso;
