@@ -5,13 +5,13 @@ import CardCurso from "./CardCurso";
 function ListaCursos({
   busqueda,
   cursosFiltrados,
-  selectedCategory,
+  selectedCategoria,
   cursosAlmacenados,
 }) {
   return (
     <>
       <div className="mt-5">
-        {busqueda === "" && selectedCategory === "" && (
+        {busqueda === "" && selectedCategoria === "" && (
           <div className="">
             {cursosAlmacenados.map((curso) => (
               <CardCurso key={curso.id} curso={curso}></CardCurso>
@@ -19,11 +19,11 @@ function ListaCursos({
           </div>
         )}
 
-        {selectedCategory === "frances" && (
+        {selectedCategoria === "frances" && (
           <div className="">
             <div className="">
               {cursos
-                .filter((curso) => curso.categoria == selectedCategory)
+                .filter((curso) => curso.categoria == selectedCategoria)
                 .map((curso) => (
                   <CardCurso key={curso.id} curso={curso}></CardCurso>
                 ))}
@@ -31,11 +31,11 @@ function ListaCursos({
           </div>
         )}
 
-        {selectedCategory === "ingles" && (
+        {selectedCategoria === "ingles" && (
           <div className="">
             <div className="">
               {cursos
-                .filter((curso) => curso.categoria == selectedCategory)
+                .filter((curso) => curso.categoria == selectedCategoria)
                 .map((curso) => (
                   <CardCurso key={curso.id} curso={curso}></CardCurso>
                 ))}
@@ -43,11 +43,11 @@ function ListaCursos({
           </div>
         )}
 
-        {selectedCategory === "italiano" && (
+        {selectedCategoria === "italiano" && (
           <div className="">
             <div className="">
               {cursos
-                .filter((curso) => curso.categoria == selectedCategory)
+                .filter((curso) => curso.categoria == selectedCategoria)
                 .map((curso) => (
                   <CardCurso key={curso.id} curso={curso}></CardCurso>
                 ))}
