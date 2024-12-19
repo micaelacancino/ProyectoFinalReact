@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import { obtenerUsuarios } from '../database';
-
+import React, { useEffect, useState } from 'react';
+import { obtenerUsuarios } from '../database.js';
+import ModalAdmin from './ModalAdmin.jsx';
 
 function Admin() {
-
   const [usuario, setUsuario] = useState([]);
+  const [show, setShow] = useState(false);
 
-  useEffect(() =>{
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  useEffect(() => {
     const users = obtenerUsuarios();
     setUsuario(users);
   }, []);
-
 
   return (
     <div className="container mt-4">
@@ -34,7 +36,7 @@ function Admin() {
                 <td>{user.nombre}</td>
                 <td>{user.email}</td>
                 <td>
-                  <button className="btn btn-primary btn-sm me-2">Editar</button>
+                  <button className="btn btn-primary btn-sm me-2" onClick={handleShow}>Editar</button>
                   <button className="btn btn-danger btn-sm">Eliminar</button>
                 </td>
               </tr>
@@ -48,6 +50,9 @@ function Admin() {
           )}
         </tbody>
       </table>
+      <ModalAdmin show={show} handleClose={handleClose} />
     </div>
-  ) }
+  );
+}
+
 export default Admin;
