@@ -20,11 +20,11 @@ const curso = cursosAlmacenados.find(c =>  id == c.id )
             <ul class="list-unstyled">
               <li class="mb-2">
                 <i class="bi bi-camera-video me-2"></i>
-                <strong>68 horas de vídeo bajo demanda</strong>
+                <strong>211 recursos descargables </strong>
               </li>
               <li class="mb-2">
                 <i class="bi bi-download me-2"></i>
-                <strong>211 recursos descargables</strong>
+                <strong>68 horas de vídeo bajo demanda</strong>
               </li>
               <li class="mb-2">
                 <i class="bi bi-phone me-2"></i>
