@@ -34,6 +34,7 @@ function App() {
               element={<DetalleCurso cursosAlmacenados={cursosAlmacenados}></DetalleCurso>}
             />
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </>
     );
