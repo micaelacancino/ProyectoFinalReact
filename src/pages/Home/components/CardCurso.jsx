@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function CardCurso({ curso }) {
  
@@ -21,7 +22,7 @@ function CardCurso({ curso }) {
               <p className="card-text  mt-1 ">{curso.descripcionBreve}</p>
               <h4 className="ms-5 mt-1">{curso.precio} </h4>
               <div className="text-end ms-5">
-                <button className="btn btn-danger px-4 ">Ver más...</button>
+              <Link className="btn btn-danger px-4" to={`/detalleCurso/${curso.id}`} >Ver más...</Link>
               </div>
             </div>
             <p className="card-text fw-bold">
