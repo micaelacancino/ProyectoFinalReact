@@ -8,10 +8,6 @@ import Swal from 'sweetalert2';
 
 
 function Register() {
-
-  
-
-
   const [formulario, setFormulario ] = useState({ 
     nombre: "",
     usuario: "",
@@ -20,8 +16,6 @@ function Register() {
     confirmarContraseña: "",
     check: false,
   });
-
-
 
   
 
@@ -34,7 +28,7 @@ function Register() {
 
   const handleSubmit =(e) => {
     e.preventDefault();
-    
+
     if (
       !formulario.nombre.trim() ||
       !formulario.usuario.trim() ||
@@ -43,15 +37,13 @@ function Register() {
       !formulario.confirmarContraseña.trim()
     ) {
       alert("Debe completar todos los campos obligatorios.");
-      return;
+      return; // Detiene el envío si hay campos vacíos
     }
 
     if(!formulario.email=== "" || !formulario.usuario==="" || !formulario.email==="" || !formulario.contraseña || !formulario.confirmarContraseña ){
       alert("debe completar los campos obligatorios!")
     }
-    if(!formulario.check){
-      alert("Debe aceptar los terminos y condiciones!")
-    }
+    
 
     if(formulario.contraseña.length < 5){
       alert("la contraseña debe contener mas caracteres")
@@ -61,19 +53,21 @@ function Register() {
       alert("Las contraseñas no coinciden.");
      
     }
+
+    if(!formulario.check){
+      alert("Debe aceptar los terminos y condiciones!");
+    }
     
     agregarUsuario(formulario);
 
     alert("Usuario registrado correctamente.");
     console.log(obtenerUsuarios());
 
-    console.log(localStorage.getItem("userData"));
-
-      Swal.fire({
-                icon: 'success',
-                title: '¡Éxito!',
-                text: 'Registrado con exito',
-              });
+    Swal.fire({
+          icon: 'success',
+          title: '¡Éxito!',
+          text: 'Los datos se registraron correctamente.',
+        });
   }
 
   return (
@@ -171,7 +165,7 @@ function Register() {
               onChange={handleChange}
               
               />
-            <label className="form-check-label text-body-secondary  " >
+            <label className="form-check-label text-body-secondary  ">
               Acepto la Política de Privacidad y los Términos del Servicio
             </label>
             </div>
@@ -179,17 +173,10 @@ function Register() {
               <div className="text-center">
                 <button type="submit" className="btn btn-secondary w-100">
                   Ingresar
-                </button>
-               
-
-
-             
+                </button>       
               </div>
-    
               <hr />
-    
-              <div>
-              
+              <div> 
                 <button type="button" className="btn btn-outline-primary w-100">
                   <i className="bi bi-facebook"></i> Registrarse con Facebook
                 </button>
@@ -200,10 +187,7 @@ function Register() {
                 </form>
               </div>
             </article>
-          </section>
-    
-     
-            
+          </section>  
         </>
   )
 }

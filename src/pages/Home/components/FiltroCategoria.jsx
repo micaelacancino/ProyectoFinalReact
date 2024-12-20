@@ -1,18 +1,18 @@
 import React from "react";
 
-function FiltroCategoria({selectedCategory, setSelectedCategory, setBusqueda }) {
+function FiltroCategoria({selectedCategoria, setSelectedCategoria, setBusqueda }) {
 
 
-  const handleCategoryChange = (event) => {
+  const handleCategoriaChange = (event) => {
     setBusqueda("")
-    setSelectedCategory(event.target.value);
+    setSelectedCategoria(event.target.value);
   };
   return (
     <div className="mt-4 text-center">
       <h5>Categorías</h5>
       <select
-        value={selectedCategory}
-        onChange={handleCategoryChange}
+        value={selectedCategoria}
+        onChange={handleCategoriaChange}
         className="form-select"
       >
         <option value="" disabled>

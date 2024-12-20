@@ -15,7 +15,7 @@ export const cursos = [
     imagen: imagenIngles,
     nombreCurso: "Ingles para principiantes",
     nivel: "A1-A2",
-    descripcionBreve:
+   descripcionBreve :
       " Este curso está diseñado para aquellos que desean iniciar su camino en el aprendizaje del idioma inglés.",
     duracion: "Duración: 30 clases | Modalidad: Online",
     precio: "$30.000",

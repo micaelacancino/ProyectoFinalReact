@@ -7,6 +7,7 @@ import ListaReseñas from "./components/ListaReseñas";
 import FiltroCurso from "./components/FiltroCurso";
 
 function HomePage({cursosAlmacenados} ) {
+  
   return (
     <section className="d-flex flex-column ">
       <BannerHome></BannerHome>
@@ -44,7 +45,7 @@ function HomePage({cursosAlmacenados} ) {
             edades."
           </p>
         </div>
-        <FiltroCurso cursosAlmacenados={cursosAlmacenados}></FiltroCurso>
+        <FiltroCurso cursosAlmacenados={cursosAlmacenados} ></FiltroCurso>
       </div>
     </section>
   );

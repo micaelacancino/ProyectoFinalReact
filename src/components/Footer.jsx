@@ -18,14 +18,14 @@ function Footer() {
                     <h5 className="text-dark">Nosotros</h5>
                     <ul className="list-unstyled d-flex justify-content-center flex-md-column  ">
                         <li>
-                            <a className=" pe-2 text-body-secondary" style={{ textDecoration: 'none', fontWeight: 100, fontSize: '18px' }} href="">Quienes Somos?</a>
+                            <a className=" pe-2 text-body-secondary fw-bold" style={{ textDecoration: 'none', fontWeight: 100, fontSize: '18px' }} href="">Quienes Somos?</a>
                         </li>
                         <li>
-                            <a className=" px-2 text-body-secondary" style={{ textDecoration: 'none', fontWeight: 100, fontSize: '18px' }} href="">Contáctanos</a>
+                            <a className=" px-2 text-body-secondary fw-bold" style={{ textDecoration: 'none', fontWeight: 100, fontSize: '18px' }} href="">Contáctanos</a>
                         </li>
 
                         <li>
-                            <a className=" ps-2 ps-md-0 text-body-secondary" style={{ textDecoration: 'none', fontWeight: 100, fontSize: '18px' }} href="">Ayuda</a>
+                            <a className=" ps-2 ps-md-0 text-body-secondary fw-bold" style={{ textDecoration: 'none', fontWeight: 100, fontSize: '18px' }} href="">Ayuda</a>
                         </li>
                     </ul>
                 </div>
@@ -33,14 +33,14 @@ function Footer() {
                     <h5 className="text-dark">Nuestras Páginas</h5>
                     <ul className="list-unstyled d-flex justify-content-center flex-md-column">
                         <li>
-                            <a className=" pe-2 text-body-secondary" style={{ textDecoration: 'none', fontWeight: 100, fontSize: '18px' }} href="">Cursos</a>
+                            <a className=" pe-2 text-body-secondary fw-bold" style={{ textDecoration: 'none', fontWeight: 100, fontSize: '18px' }} href="">Cursos</a>
                         </li>
                         <li>
-                            <a className="px-2 text-body-secondary" style={{ textDecoration: 'none', fontWeight: 100, fontSize: '18px' }} href="">Proyectos</a>
+                            <a className="px-2 text-body-secondary fw-bold" style={{ textDecoration: 'none', fontWeight: 100, fontSize: '18px' }} href="">Proyectos</a>
                         </li>
 
                         <li>
-                            <a className="ps-2 ps-md-0 text-body-secondary" style={{ textDecoration: 'none', fontWeight: 100, fontSize: '18px' }} href="">Viajes al Exterior</a>
+                            <a className="ps-2 ps-md-0 text-body-secondary fw-bold" style={{ textDecoration: 'none', fontWeight: 100, fontSize: '18px' }} href="">Viajes al Exterior</a>
                         </li>
                     </ul>
                 </div>
