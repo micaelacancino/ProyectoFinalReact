@@ -29,17 +29,14 @@ export const agregarCursoCarrito = (curso, carrito) => {
     carrito.push(curso);
     return carrito;
   }
-   
-  const cursoBuscado = carrito.find(c => c.id == curso.id)
-  
-  if(!cursoBuscado){
+
+  const cursoBuscado = carrito.find((c) => c.id == curso.id);
+
+  if (!cursoBuscado) {
     carrito.push(curso);
   }
-  return carrito
-
-
+  return carrito;
 };
-
 
 export const obtenerCompras = () => {
   const compras = JSON.parse(localStorage.getItem("compras"));

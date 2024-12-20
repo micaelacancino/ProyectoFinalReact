@@ -1,9 +1,7 @@
-import cursoingles from "../../../assets/img/cursoIngles/cursos-ingles-c1.jpg";
 
 
 
-
-const CursoCarrito = ({curso}) => {
+const CursoCarrito = ({curso, eliminarCurso}) => {
   return (
     <div className="d-flex flex-md-row gap-1 gap-md-3 cardCarrito w-100 h-100 bg-white">
       <div className="align-middle">
@@ -11,9 +9,9 @@ const CursoCarrito = ({curso}) => {
       </div>
       <div className="w-100 d-flex flex-column align-items-center gap-md-2 ">
         <div className="d-flex justify-content-between w-100">
-          <p className="align-middle mb-0 fw-bold">{curso.nombreCurso} </p>
-          <a className="text-primary">
-            <small>Eliminar</small>
+          <p className="align-middle mb-0 fw-bold mt-3">{curso.nombreCurso} </p>
+          <a className="text-danger pt-3 me-3 fw-bold cursor-pointer">
+            <small className="cursor-pointer" onClick={() => eliminarCurso(curso.id)} >Eliminar</small>
           </a>
         </div>
         <div className="d-flex justify-content-between w-100 mt-2">
@@ -21,7 +19,7 @@ const CursoCarrito = ({curso}) => {
             <span>Nivel:{curso.nivel} </span>
             <small>{curso.duracion} </small>
           </div>
-          <div className="text-end fw-bold fs-5">
+          <div className="text-end fw-bold fs-5 me-2">
             <p>${curso.precio}</p>
           </div>
         </div>

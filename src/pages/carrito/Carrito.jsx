@@ -41,19 +41,24 @@ const Carrito = ({
     navegacion("/");
   };
 
+  const eliminarCurso = (id) => {
+    const nuevoCarrito = carrito.filter(curso => curso.id !== id);
+    setCarrito(nuevoCarrito);
+    localStorage.setItem("carrito", JSON.stringify(nuevoCarrito)); // Actualiza el localStorage
+  };
   return (
     <section className="py-5 container">
       <div className="pt-lg-5 pb-2 pb-md-4">
-        <h1 className="text-start">Carrito</h1>
+        <h1 className="text-start titlePages">Carrito</h1>
       </div>
       <div className="row gy-2">
         <div className="col-lg-9">
-          <p className="text-start border-bottom">Cursos añadidos:</p>
+          <p className="text-start border-bottom titlePages  fs-4">Cursos añadidos:</p>
           {carrito.length === 0 && <p>No se añadieron cursos al carrito</p>}
 
           <article className="px-2 py-4 p-md-4 d-flex flex-column gap-4 rounded-4">
             {carrito.map((c) => (
-              <CursoCarrito key={c.id} curso={c}></CursoCarrito>
+              <CursoCarrito key={c.id} curso={c} eliminarCurso={eliminarCurso} ></CursoCarrito>
             ))}
           </article>
         </div>

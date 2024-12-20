@@ -18,8 +18,10 @@ body {
 
 .imgCarrito{
     max-width: 100px;
-    height: 100px;
+    height: 110px;
     object-fit: cover;
+    margin-top: 10px;
+    margin-left: 5px;
 }
 
 @media all and (min-width:768px){
