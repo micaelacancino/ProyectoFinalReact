@@ -10,6 +10,9 @@ import { obtenerCursos } from "./helpers/bdLocal";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import Error404 from "./components/error404"
+import Nosotros from "./components/team"
+
 function App() {
   const [cursosAlmacenados, setCursosAlmacenados] = useState([]);
 
@@ -20,6 +23,7 @@ function App() {
 
   return (
     <>
+=======
       <Router>
         <NavBar />
         <Routes>
