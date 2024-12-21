@@ -7,11 +7,11 @@ import FiltroCategoria from "./FiltroCategoria";
 function FiltroCurso({ cursosAlmacenados }) {
   const [busqueda, setBusqueda] = useState("");
   const [cursosFiltrados, setCursosFiltrados] = useState([]);
-  const [selectedCategoria, setSelectedCategoria] = useState("");
+  const [categoria, setCategoria] = useState("");
 
   const filtrarCursosPorNombre = () => {
-    if (selectedCategoria !== "") {
-      setSelectedCategoria("");
+    if (categoria !== "") {
+      setCategoria("");
     }
     const inputBusqueda = busqueda.toLowerCase().trim();
 
@@ -48,8 +48,8 @@ function FiltroCurso({ cursosAlmacenados }) {
         <article class="row">
           <div class="col-12 col-md-3">
             <FiltroCategoria
-              selectedCategoria={selectedCategoria}
-              setSelectedCategoria={setSelectedCategoria}
+              categoria={categoria}
+              setCategoria={setCategoria}
               setBusqueda={setBusqueda}
             ></FiltroCategoria>{" "}
           </div>
@@ -58,7 +58,7 @@ function FiltroCurso({ cursosAlmacenados }) {
               cursosAlmacenados={cursosAlmacenados}
               busqueda={busqueda}
               cursosFiltrados={cursosFiltrados}
-              selectedCategoria={selectedCategoria}
+              categoria={categoria}
             ></ListaCursos>
           </div>
         </article>

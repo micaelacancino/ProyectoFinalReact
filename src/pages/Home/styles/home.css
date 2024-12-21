@@ -16,27 +16,25 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-
 .imgBanner {
   position: relative;
-  width: 100%; 
-  height: auto; 
-  max-height: 650px; 
-  object-fit: cover; 
+  width: 100%;
+  height: auto;
+  max-height: 650px;
+  object-fit: cover;
 }
 
 .descripcionBanner {
   position: absolute;
-  width: 90%; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: rgba(235, 235, 235, 0.5);
-  border-radius: 10px; 
-  padding: 15px; 
-  text-align: center; 
-  font-size: 1.2rem; 
-  
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.2rem;
 }
 .containerInfo {
   max-width: 100%;
@@ -68,12 +66,20 @@ body {
   padding: 20px;
 }
 
-
-
-
-@media all and (min-width:768px){
-  .containerInfo{
+@media all and (min-width: 768px) {
+  .containerInfo {
     margin-top: 50px;
   }
-  
+
+  .descripcionBanner {
+    top: 300px;
+    left: 400px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .descripcionBanner {
+    top: 50%;
+    left: 50%;
+  }
 }

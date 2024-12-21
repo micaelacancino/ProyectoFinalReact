@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { guardarCompras, obtenerCarrito } from "../../helpers/bdLocal";
 import { usuario } from "../../helpers/usuario";
 import { Navigate, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Carrito = ({
   carrito,
@@ -39,6 +40,13 @@ const Carrito = ({
     setCarrito([])
     localStorage.removeItem("carrito")
     navegacion("/");
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Compra confirmada. Redirigiendo al pago...",
+      showConfirmButton: false,
+      timer: 2000,
+    });
   };
 
   const eliminarCurso = (id) => {

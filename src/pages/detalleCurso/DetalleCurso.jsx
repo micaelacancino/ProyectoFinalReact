@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { agregarCursoCarrito, guardarCarrito } from "../../helpers/bdLocal";
+import Swal from "sweetalert2";
 
 function DetalleCurso({
   cursosAlmacenados,
@@ -11,94 +12,113 @@ function DetalleCurso({
   const { id } = useParams();
 
   const curso = cursosAlmacenados.find((c) => id == c.id);
+  const cursoAgregado = carrito.find((c) => c.id == curso.id);
 
-  const navegacion = useNavigate()
+  const navegacion = useNavigate();
 
   const agregarCurso = () => {
     if (!usuarioLogueado) {
-      console.log("debe iniciar sesion para realizar una compra");
+      Swal.fire({
+        position: "top-end",
+        icon: "warning",
+        title: "Debe iniciar sesion antes de añadir un curso al carrito",
+        showConfirmButton: false,
+        timer: 3500,
+      });
       return;
     } else {
       const carritoAux = carrito;
       const carritoActual = agregarCursoCarrito(curso, carritoAux);
       setCarrito(carritoActual);
       guardarCarrito(carritoActual);
-      navegacion("/carrito")
+      navegacion("/carrito");
     }
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Curso añadido al carrito correctamente",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
+  return (
+    <section className="container">
+      <div className="container mt-5">
+        <article className="row align-items-center">
+          <div className="col-12 col-md-8 text-center text-md-start">
+            <h2>{curso?.nombreCurso}</h2>
+            <h4 className="my-4 text-start">{curso?.descripcionBreve}</h4>
 
-return (
-  <section class="container">
-    <div class="container mt-5">
-      <article class="row align-items-center">
-        <div class="col-12 col-md-8 text-center text-md-start">
-          <h2>{curso.nombreCurso}</h2>
-          <h4 class="my-4 text-start">{curso.descripcionBreve}</h4>
+            <div className="card p-4 shadow-sm mt-4">
+              <h3 className="fw-bold mb-4">Este curso incluye:</h3>
+              <ul className="list-unstyled">
+                <li className="mb-2">
+                  <i className="bi bi-camera-video me-2"></i>
+                  <strong>211 recursos descargables </strong>
+                </li>
+                <li className="mb-2">
+                  <i className="bi bi-download me-2"></i>
+                  <strong>68 horas de vídeo bajo demanda</strong>
+                </li>
+                <li className="mb-2">
+                  <i className="bi bi-phone me-2"></i>
+                  <strong>Acceso en dispositivos móviles y TV</strong>
+                </li>
+                <li>
+                  <i className="bi bi-award me-2"></i>
+                  <strong>Certificado de finalización</strong>
+                </li>
+                <li className="mt-5 ms-2">
+                  <h4>${curso?.precio} </h4>
+                </li>
+              </ul>
+              <div className="d-flex justify-content-end">
+                {!cursoAgregado && (
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    onClick={agregarCurso}
+                  >
+                    Agregar al carrito
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
 
-          <div class="card p-4 shadow-sm mt-4">
-            <h3 class="fw-bold mb-4">Este curso incluye:</h3>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <i class="bi bi-camera-video me-2"></i>
-                <strong>211 recursos descargables </strong>
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-download me-2"></i>
-                <strong>68 horas de vídeo bajo demanda</strong>
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-phone me-2"></i>
-                <strong>Acceso en dispositivos móviles y TV</strong>
-              </li>
-              <li>
-                <i class="bi bi-award me-2"></i>
-                <strong>Certificado de finalización</strong>
-              </li>
-              <li class="mt-5 ms-2">
-                <h4>{curso.precio} </h4>
-              </li>
-            </ul>
-            <div class="d-flex justify-content-end">
-              <button type="button" class="btn btn-secondary"  onClick={agregarCurso} >
-                Agregar al carrito
-              </button>
+          <div className="col-12 col-md-4 text-center mt-5 pt-4">
+            <img
+              src={curso?.imagen}
+              alt="Curso de Inglés"
+              className="img-fluid rounded shadow-sm"
+            />
+          </div>
+        </article>
+      </div>
+
+      <div className="container mt-5">
+        <div className="card p-4 shadow-sm">
+          <h2 className="fw-bold mb-4">Lo que aprenderás</h2>
+
+          <div className="row">
+            <div className="col-md-4">
+              <p>✓ correcta pronunciación </p>
+              <p>✓ fonética</p>
+            </div>
+
+            <div className="col-md-4">
+              <p>✓ gramática</p>
+              <p>✓ comprensión auditiva.</p>
+            </div>
+            <div className="col-md-4">
+              <p>✓ expresiones comunes.</p>
+              <p>✓ vocabulario clave </p>
             </div>
           </div>
         </div>
-
-        <div class="col-12 col-md-4 text-center mt-5 pt-4">
-          <img
-            src={curso.imagen}
-            alt="Curso de Inglés"
-            class="img-fluid rounded shadow-sm"
-          />
-        </div>
-      </article>
-    </div>
-
-    <div class="container mt-5">
-      <div class="card p-4 shadow-sm">
-        <h2 class="fw-bold mb-4">Lo que aprenderás</h2>
-
-        <div class="row">
-          <div class="col-md-4">
-            <p>✓ correcta pronunciación </p>
-            <p>✓ fonética</p>
-          </div>
-
-          <div class="col-md-4">
-            <p>✓ gramática</p>
-            <p>✓ comprensión auditiva.</p>
-          </div>
-          <div class="col-md-4">
-            <p>✓ expresiones comunes.</p>
-            <p>✓ vocabulario clave </p>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
-);
- }
+    </section>
+  );
+}
 export default DetalleCurso;

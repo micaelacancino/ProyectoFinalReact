@@ -5,13 +5,13 @@ import CardCurso from "./CardCurso";
 function ListaCursos({
   busqueda,
   cursosFiltrados,
-  selectedCategoria,
+  categoria,
   cursosAlmacenados,
 }) {
   return (
     <>
       <div className="mt-5">
-        {busqueda === "" && selectedCategoria === "" && (
+        {busqueda === "" && categoria === "" && (
           <div className="">
             {cursosAlmacenados.map((curso) => (
               <CardCurso key={curso.id} curso={curso}></CardCurso>
@@ -19,11 +19,11 @@ function ListaCursos({
           </div>
         )}
 
-        {selectedCategoria === "frances" && (
+        {categoria === "frances" && (
           <div className="">
             <div className="">
               {cursos
-                .filter((curso) => curso.categoria == selectedCategoria)
+                .filter((curso) => curso.categoria == categoria)
                 .map((curso) => (
                   <CardCurso key={curso.id} curso={curso}></CardCurso>
                 ))}
@@ -31,11 +31,11 @@ function ListaCursos({
           </div>
         )}
 
-        {selectedCategoria === "ingles" && (
+        {categoria === "ingles" && (
           <div className="">
             <div className="">
               {cursos
-                .filter((curso) => curso.categoria == selectedCategoria)
+                .filter((curso) => curso.categoria == categoria)
                 .map((curso) => (
                   <CardCurso key={curso.id} curso={curso}></CardCurso>
                 ))}
@@ -43,11 +43,11 @@ function ListaCursos({
           </div>
         )}
 
-        {selectedCategoria === "italiano" && (
+        {categoria === "italiano" && (
           <div className="">
             <div className="">
               {cursos
-                .filter((curso) => curso.categoria == selectedCategoria)
+                .filter((curso) => curso.categoria == categoria)
                 .map((curso) => (
                   <CardCurso key={curso.id} curso={curso}></CardCurso>
                 ))}
