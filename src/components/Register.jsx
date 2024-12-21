@@ -37,7 +37,7 @@ function Register() {
       !formulario.confirmarContraseña.trim()
     ) {
       alert("Debe completar todos los campos obligatorios.");
-      return; // Detiene el envío si hay campos vacíos
+      return; 
     }
 
     if(!formulario.email=== "" || !formulario.usuario==="" || !formulario.email==="" || !formulario.contraseña || !formulario.confirmarContraseña ){
@@ -60,9 +60,7 @@ function Register() {
     
     agregarUsuario(formulario);
 
-    alert("Usuario registrado correctamente.");
-    console.log(obtenerUsuarios());
-
+   
     Swal.fire({
           icon: 'success',
           title: '¡Éxito!',
