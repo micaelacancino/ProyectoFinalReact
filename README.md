@@ -39,8 +39,7 @@ La aplicación está desplegada en Netlify. Puedes acceder haciendo clic en el s
 HTML5, CSS3, Bootstrap5, Javascript, Reactjs, React-Router-Dom, React-Bootstrap,SweetAlert.
 * Gestión del proyecto:
 Taiga 
-*Metodologias Agiles:
-SCRUM
+* Metodologia SCRUM
 
 
 
