@@ -2,29 +2,22 @@ import React, { useEffect, useState } from 'react';
 import logo1 from "../assets/imagen1.png";
 import "../css/navbar.css";
 import { Link, useNavigate } from 'react-router-dom';
+import { usuario } from '../helpers/usuario';
 
-function NavBar() {
-  const [usuarioSesion, setUsuarioSesion] = useState(null);
-  const navigate = useNavigate();
+function NavBar({usuarioLogueado, setUsuarioLogueado}) {
+ 
+    const navigate = useNavigate(); 
+    const handleLogout = () => {
+        sessionStorage.removeItem("sesion");
+        setUsuarioLogueado(null);
+        navigate("/");
+      };
+    
+ 
 
-  const checkSession = () => {
-    const sesionGuardada = sessionStorage.getItem("sesion");
-    if (sesionGuardada) {
-      setUsuarioSesion(JSON.parse(sesionGuardada));
-    } else {
-      setUsuarioSesion(null);
-    }
-  };
+ 
 
-  useEffect(() => {
-    checkSession();
-  }, []);
-
-  const handleLogout = () => {
-    sessionStorage.removeItem("sesion");
-    setUsuarioSesion(null);
-    navigate("/");
-  };
+ 
 
   return (
     <>
@@ -63,7 +56,7 @@ function NavBar() {
                 <li className="nav-item jost">
                   <a className="nav-link text-white" href="">Contacto</a>
                 </li>
-                {usuarioSesion ? (
+                {usuarioLogueado  && (
                   <li className="nav-item jost mx-2">
                     <button
                       type="button"
@@ -73,28 +66,31 @@ function NavBar() {
                       Salir
                     </button>
                   </li>
-                ) : (
-                  <>
-                    <li className="nav-item jost mx-2">
-                      <Link
-                        to={"/login"}
-                        type="button"
-                        className="btn btn-secondary btn-lg mt-1"
-                      >
-                        Iniciar Sesion
-                      </Link>
-                    </li>
-                    <li className="nav-item jost mx-2">
-                      <Link
-                        to={"/registro"}
-                        type="button"
-                        className="btn btn-secondary btn-lg mt-1"
-                      >
-                        Registrarse
-                      </Link>
-                    </li>
-                  </>
-                )}
+                )   }
+                {!usuarioLogueado && (
+                    <>
+                     <li className="nav-item jost mx-2">
+                        <Link
+                         to={"/login"}
+                          type="button"
+                          className="btn btn-secondary btn-lg mt-1"
+                       >
+                          Iniciar Sesion
+                        </Link>
+                      </li>
+                      <li className="nav-item jost mx-2">
+                        <Link
+                          to={"/registro"}
+                          type="button"
+                          className="btn btn-secondary btn-lg mt-1"
+                        >
+                          Registrarse
+                       </Link>
+                      </li>
+                    </>
+                 ) }
+                 
+               
               </ul>
             </div>
           </div>

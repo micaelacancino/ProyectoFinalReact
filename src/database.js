@@ -1,6 +1,6 @@
 let usuarios = JSON.parse(localStorage.getItem("userData")) || [];
 
-localStorage.removeItem("userData");
+
 
 
 export const agregarUsuario = (usuario) => {
@@ -12,11 +12,6 @@ export const agregarUsuario = (usuario) => {
 
 export const obtenerUsuarios = () => {
   return usuarios;
-  
 };
 
 
-export const resetearUsuarios = () => {
-  usuarios = [];
-  localStorage.setItem("userData", JSON.stringify(usuarios));
-};

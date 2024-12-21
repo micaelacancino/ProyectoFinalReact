@@ -7,14 +7,14 @@ import { obtenerUsuarios } from '../database';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-function Login() {
+function Login({setUsuarioLogueado, usuarioLogueado}) {
   const [email, setEmail] = useState("");
   const [contraseña, setContraseña] = useState("");
   const [usuarios, setUsuarios] = useState([]);
 
   const navigate = useNavigate(); 
 
-  useEffect(() => {
+  useEffect(( ) => {
     const usuariosLocal = obtenerUsuarios();
     setUsuarios(usuariosLocal);
   }, []);
@@ -31,7 +31,7 @@ function Login() {
       };
       
       sessionStorage.setItem("sesion", JSON.stringify(adminUser));
- 
+      setUsuarioLogueado(adminUser);
       
       Swal.fire({
         icon: 'success',
@@ -51,6 +51,7 @@ function Login() {
     if (usuarioEncontrado) {
       console.log('Usuario encontrado:', usuarioEncontrado);
       sessionStorage.setItem("sesion", JSON.stringify(usuarioEncontrado));
+      setUsuarioLogueado(usuarioEncontrado);
   
       navigate("/");
     } else {
