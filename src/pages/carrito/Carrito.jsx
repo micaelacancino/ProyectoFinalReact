@@ -27,8 +27,8 @@ const Carrito = ({
 
   const confirmarCompra = () => {
     const nuevaCompra = {
-      carrito: carrito,
-      usuario: usuarioLogueado,
+      cursos: carrito,
+      usuario: usuarioLogueado.email,
       id: crypto.randomUUID(),
       total: total,
     };
@@ -52,7 +52,7 @@ const Carrito = ({
   const eliminarCurso = (id) => {
     const nuevoCarrito = carrito.filter(curso => curso.id !== id);
     setCarrito(nuevoCarrito);
-    localStorage.setItem("carrito", JSON.stringify(nuevoCarrito)); // Actualiza el localStorage
+    localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
   };
   return (
     <section className="py-5 container">

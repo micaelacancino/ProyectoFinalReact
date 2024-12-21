@@ -13,7 +13,7 @@ function HomePage({cursosAlmacenados} ) {
       <div className="container containerInfo mb-5">
         <article className="row justify-content-center mt-5">
           <div className="col-12 col-md-6">
-            <h2 className="text-center my-5 titlePages">
+            <h2 className="text-center mb-4  titlePages">
               ¿Te gustaría aprender un nuevo idioma?
             </h2>
             <p className="text-center mb-4 fs-5">
