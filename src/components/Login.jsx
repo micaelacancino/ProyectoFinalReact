@@ -49,7 +49,6 @@ function Login({setUsuarioLogueado, usuarioLogueado}) {
     );
 
     if (usuarioEncontrado) {
-      console.log('Usuario encontrado:', usuarioEncontrado);
       sessionStorage.setItem("sesion", JSON.stringify(usuarioEncontrado));
       setUsuarioLogueado(usuarioEncontrado);
   
@@ -67,15 +66,16 @@ function Login({setUsuarioLogueado, usuarioLogueado}) {
     <>
       <section className="container my-5">
         <article className="row">
-          <div className="d-none d-lg-block col-lg-6">
+          <div className="d-none d-lg-block col-lg-6 ">
             <img
               src={imagenlogin}
-              alt="imagen de un cocinero con muchos cupcake"
-              className="imgRegistro rounded-4 img-fluid"
+              alt="imagen de un chico y una chica ingresando al mundo de los cursos"
+              className="imgRegistro  img-fluid"
+              style={{height:"90vh"}}
             />
           </div>
 
-          <div className="contenedorregistro col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center">
+          <div className="contenedorregistro col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center" >
             <form className="formregistro px-3 px-md-4 py-3 shadow rounded-2" onSubmit={handleSubmit}>
               <div className="mb-3">
                 <h3 className="text-center">Inicio de sesión</h3>

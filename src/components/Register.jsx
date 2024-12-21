@@ -77,7 +77,7 @@ function Register() {
               <div className="d-none d-lg-block col-lg-6">
                 <img
                   src={imagenregister}
-                  alt="imagen de un cocinero con muchos cupcake"
+                  alt="imagen de un chico y una chica ingresando al mundo de los cursos"
                   className="imgRegistro rounded-4 img-fluid"
                 />
               </div>

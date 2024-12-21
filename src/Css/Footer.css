@@ -12,5 +12,21 @@
     height: 28vh;
     
   }
-  
+
+  @media all and (min-width: 768px) {
+    .logoSize {
+      width: 15vh;
+      height: 19vh;
+      
+    }
+  }
+
+    @media all and (min-width: 1024px) {
+      .logoSize {
+        width: 25vh;
+        height: 28vh;
+        
+      }
+  }
+
 

@@ -54,31 +54,31 @@ function Admin() {
       <div className="container my-5">
         <div className="d-flex align-items-center justify-content-between">
           <h1 className="text-center mb-4">Lista de Usuarios Registrados</h1>
-          <Link className="btn btn-secondary" to={"/compras"}>Ver compras</Link>
+          <Link className="btn btn-info" to={"/compras"}>Ver compras</Link>
         </div>
         <div className="row justify-content-center g-4 container-fluid">
           {usuarios.length > 0 ? (
             usuarios.map((user, index) => (
               <div key={index} className="col-12 col-md-6 col-lg-4">
                 <div className="card h-100 shadow-sm">
-                  <div className="card-header bg-dark text-white">
-                    <h5 className="card-title mb-0">Usuario #{index + 1}</h5>
+                  <div className="card-header bg-dark text-white ">
+                    <h5 className="card-title mb-0 ">Usuario #{index + 1}</h5>
                   </div>
                   <div className="card-body">
                     <div className="mb-3">
-                      <h6 className="text-muted mb-1">Usuario:</h6>
+                      <h6 className="text-muted mb-1 fw-bold">Usuario:</h6>
                       <p className="mb-2">{user.usuario}</p>
 
-                      <h6 className="text-muted mb-1">Nombre:</h6>
+                      <h6 className="text-muted mb-1 fw-bold">Nombre:</h6>
                       <p className="mb-2">{user.nombre}</p>
 
-                      <h6 className="text-muted mb-1">Email:</h6>
+                      <h6 className="text-muted mb-1 fw-bold">Email:</h6>
                       <p>{user.email}</p>
                     </div>
 
                     <div className="d-flex gap-2 justify-content-center">
                       <button
-                        className="btn btn-primary"
+                        className="btn btn-info"
                         onClick={() => handleShow(user)}
                       >
                         Editar

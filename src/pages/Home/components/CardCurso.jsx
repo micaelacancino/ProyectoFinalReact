@@ -31,7 +31,7 @@ function CardCurso({ curso }) {
        
             <div className="text-start text-md-end mt-3">
               <Link
-                className="btn btn-danger px-4"
+                className="btn btn-info px-4"
                 to={`/detalleCurso/${curso.id}`}
               >
                 Ver más...

@@ -43,18 +43,18 @@ function NavBar({usuarioLogueado, setUsuarioLogueado}) {
             <div className="collapse navbar-collapse" id="menu">
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item jost">
-                  <Link to={"/"} className="nav-link font text-white" aria-current="page">
+                  <Link to={"/"} className="nav-link font text-dark" aria-current="page">
                     Inicio
                   </Link>
                 </li>
                 <li className="nav-item jost">
-                  <a className="nav-link text-white" href="">Nosotros</a>
+                  <Link to={"*"} className="nav-link text-dark" href="">Nosotros</Link>
                 </li>
                 <li className="nav-item jost">
-                  <a className="nav-link text-white" href="">Cursos</a>
+                  <Link to={"*"} className="nav-link text-dark" href="">Planes</Link>
                 </li>
                 <li className="nav-item jost">
-                  <a className="nav-link text-white" href="">Contacto</a>
+                  <Link to={"*"} className="nav-link text-dark" href="">Contacto</Link>
                 </li>
                 {usuarioLogueado  && (
                   <li className="nav-item jost mx-2">
@@ -73,7 +73,7 @@ function NavBar({usuarioLogueado, setUsuarioLogueado}) {
                         <Link
                          to={"/login"}
                           type="button"
-                          className="btn btn-secondary btn-lg mt-1"
+                          className="btn btn-info btn-lg mt-1"
                        >
                           Iniciar Sesion
                         </Link>
@@ -82,7 +82,7 @@ function NavBar({usuarioLogueado, setUsuarioLogueado}) {
                         <Link
                           to={"/registro"}
                           type="button"
-                          className="btn btn-secondary btn-lg mt-1"
+                          className="btn btn-info btn-lg mt-1"
                         >
                           Registrarse
                        </Link>

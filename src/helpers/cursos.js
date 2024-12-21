@@ -74,9 +74,9 @@ export const cursos = [
     nombreCurso: "Frances avanzado",
     nivel: "C1",
     descripcionBreve:
-      "Da un paso adelante con tu francés: Mejora la gramática,lectura, escucha, vocabulario y más.",
+      "Da un paso adelante con tu francés:  Mejora la gramática, escucha, vocabulario y más..",
     duracion: "Duración: 37 clases | Modalidad: Online",
-    precio: " 49.000",
+    precio: "49.000",
   },
   {
     id: 8,
