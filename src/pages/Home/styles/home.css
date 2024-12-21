@@ -10,7 +10,6 @@ body {
       no-repeat center center fixed;
   background-size: cover;
   font-family: "Montserrat", sans-serif;
-
 }
 
 .titlePages {
@@ -18,38 +17,34 @@ body {
 }
 
 .imgBanner {
-  position: absolute;
-  top: 100px;
-  max-width: 100%;
-  height: 650px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 650px;
+  object-fit: cover;
 }
+
 .descripcionBanner {
   position: absolute;
   width: 90%;
-  top: 320px;
-  left: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: rgba(235, 235, 235, 0.5);
   border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.2rem;
 }
-
 .containerInfo {
   max-width: 100%;
-  margin-top: 750px;
+  margin-top: 250px;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
-.imgIdiomas {
-  transition: 0.7s;
-  
-}
-
-.imgIdiomas:hover {
-  transform: scale(1.05);
-  transition: 0.7s;
-}
 .containerSubtitulo {
- width: 100%;
+  width: 100%;
 }
 
 .reseña-card {
@@ -57,13 +52,34 @@ body {
 }
 
 .cardCursos {
-  width: 100%;
-  min-height: 180px;
-  background-color: #ffffff;
-  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.cardCursos:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
 .imgCard {
-  width: 300px;
+  object-fit: cover;
   height: 100%;
   padding: 20px;
+}
+
+@media all and (min-width: 768px) {
+  .containerInfo {
+    margin-top: 50px;
+  }
+
+  .descripcionBanner {
+    top: 300px;
+    left: 400px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .descripcionBanner {
+    top: 50%;
+    left: 50%;
+  }
 }

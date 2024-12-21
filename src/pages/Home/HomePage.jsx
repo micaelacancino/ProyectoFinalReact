@@ -1,6 +1,5 @@
 import React from "react";
 import BannerHome from "./components/BannerHome";
-import ListaCursos from "./components/ListaCursos";
 import "./styles/home.css";
 import idiomas from "../../assets/img/idiomas.jpg";
 import ListaReseñas from "./components/ListaReseñas";
