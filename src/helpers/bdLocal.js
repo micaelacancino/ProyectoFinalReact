@@ -6,15 +6,6 @@ export const obtenerCursos = () => {
   return cursosAlmacenados || cursos;
 };
 
-export const obtenerUsuarioLogueado = () => {
-  const usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
-  return usuarioLogueado || usuario;
-};
-
-export const guardarUsuarioLogueado = (usuario) => {
-  localStorage.setItem("usuarioLogueado", JSON.stringify(usuario));
-};
-
 export const obtenerCarrito = () => {
   const carrito = JSON.parse(localStorage.getItem("carrito"));
   return carrito || [];

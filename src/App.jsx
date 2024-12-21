@@ -9,14 +9,15 @@ import Error404 from "./components/Error404.jsx";
 import Nosotros from "./components/Team.jsx";
 import { useEffect, useState } from "react";
 import {
-  guardarUsuarioLogueado,
+ 
   obtenerCompras,
   obtenerCursos,
-  obtenerUsuarioLogueado,
+  
 } from "./helpers/bdLocal";
 import Carrito from "./pages/carrito/Carrito";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ComprasUsuarios from "./components/ComprasUsuarios.jsx";
 
 
 function App() {
@@ -85,10 +86,10 @@ function App() {
           />
           <Route path="/admin" element={<Admin />} />
           <Route path="/login" element={<Login usuarioLogueado={usuarioLogueado}  setUsuarioLogueado ={setUsuarioLogueado} /> } />
-          <Route path="/registro" element={<Register />} />
-          <Route path="/error404" element={<Error404 />} />
+          <Route path="/registro" element={<Register />} /> 
           <Route path="/nosotros" element={<Nosotros />} />
-
+          <Route path="/compras" element={<ComprasUsuarios compras={compras}  />} />
+          <Route path="*" element={<Error404/>} />
         </Routes>
         <Footer /> 
       </Router>
