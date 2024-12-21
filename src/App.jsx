@@ -5,13 +5,12 @@ import Admin from "./components/Admin.jsx";
 import Register from "./components/Register.jsx";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
+import Error404 from "./components/Error404.jsx";
+import Nosotros from "./components/Team.jsx";
 import { useEffect, useState } from "react";
 import { obtenerCursos } from "./helpers/bdLocal";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import Error404 from "./components/error404"
-import Nosotros from "./components/team"
 
 function App() {
   const [cursosAlmacenados, setCursosAlmacenados] = useState([]);
@@ -23,9 +22,9 @@ function App() {
 
   return (
     <>
-=======
+
       <Router>
-        <NavBar />
+        <NavBar /> 
         <Routes>
           <Route
             path="/"
@@ -38,8 +37,10 @@ function App() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registro" element={<Register />} />
+          <Route path="/error404" element={<Error404/>}/>
+          <Route path="/nosotros" element={<Nosotros/>}/>
         </Routes>
-        <Footer />
+        <Footer /> 
       </Router>
     </>
   );

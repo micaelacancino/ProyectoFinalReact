@@ -21,34 +21,44 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+ 
+    if (email === "admin@admin.com" && contraseña === "admin123") {
+      const adminUser = {
+        email: "admin@admin.com",
+        contraseña: "admin123",
+        rol: "admin"
+      };
+      
+      sessionStorage.setItem("sesion", JSON.stringify(adminUser));
+ 
+      
+      Swal.fire({
+        icon: 'success',
+        title: '¡Éxito!',
+        text: 'Bienvenido Admin',
+      });
+      
+      navigate("/admin");
+      return; 
+    }
+
+
     const usuarioEncontrado = usuarios.find(
       usuario => usuario.email === email && usuario.contraseña === contraseña
     );
-    console.log(usuarioEncontrado);
 
     if (usuarioEncontrado) {
       console.log('Usuario encontrado:', usuarioEncontrado);
       sessionStorage.setItem("sesion", JSON.stringify(usuarioEncontrado));
+  
       navigate("/");
     } else {
-      const usuarioAdmin = usuarios.find(
-        usuario => usuario.email === "admin@admin.com" && usuario.contraseña === "admin123"
-      );
-
-      if (usuarioAdmin) {
-        Swal.fire({
-          icon: 'success',
-          title: '¡Éxito!',
-          text: 'Bienvenido Admin',
-        });
-        navigate("/admin"); 
-      } else {
-        Swal.fire({
-          icon: 'error',
-          title: 'Error',
-          text: 'Credenciales incorrectas',
-        });
-      }
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Credenciales incorrectas',
+      });
     }
   };
 
