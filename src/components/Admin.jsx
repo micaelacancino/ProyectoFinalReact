@@ -51,54 +51,54 @@ function Admin() {
   }, []);
 
   return (
-    <div className="container-fluid mt-4">
+    <div className="container">
     <h1 className="text-center mb-4">Lista de Usuarios Registrados</h1>
-    <div className="row justify-content-center">
-      <div className="col-12 col-lg-10">
-        <div className="table-responsive">
-          <table className="table table-bordered table-striped">
-            <thead className="table-dark">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Usuario</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Email</th>
-                <th scope="col">Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              {usuarios.length > 0 ? (
-                usuarios.map((user, index) => (
-                  <tr key={index}>
-                    <th scope="row">{index + 1}</th>
-                    <td>{user.usuario}</td>
-                    <td>{user.nombre}</td>
-                    <td>{user.email}</td>
-                    <td>
-                      <div className="row d-flex justify-content-evenly ">
-                        <button
-                          className="btn btn-primary btn-sm me-2 col-sm-12 mt-1" style={{width:"70px"}}
-                          onClick={() => handleShow(user)}
-                        >
-                          Editar
-                        </button>
-                        <button className="btn btn-danger btn-sm col-sm-12 mt-1" onClick={() => eliminarUsuario(user.id)}  style={{width:"70px"}} >Eliminar</button>
-                      </div>
-                    </td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan="5" className="text-center">
-                    No hay usuarios registrados.
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+    <div className="row justify-content-center g-4 container-fluid">
+  {usuarios.length > 0 ? (
+    usuarios.map((user, index) => (
+      <div key={index} className="col-12 col-md-6 col-lg-4">
+        <div className="card h-100 shadow-sm">
+          <div className="card-header bg-dark text-white">
+            <h5 className="card-title mb-0">Usuario #{index + 1}</h5>
+          </div>
+          <div className="card-body">
+            <div className="mb-3">
+              <h6 className="text-muted mb-1">Usuario:</h6>
+              <p className="mb-2">{user.usuario}</p>
+              
+              <h6 className="text-muted mb-1">Nombre:</h6>
+              <p className="mb-2">{user.nombre}</p>
+              
+              <h6 className="text-muted mb-1">Email:</h6>
+              <p>{user.email}</p>
+            </div>
+            
+            <div className="d-flex gap-2 justify-content-center">
+              <button
+                className="btn btn-primary"
+                onClick={() => handleShow(user)}
+              >
+                Editar
+              </button>
+              <button 
+                className="btn btn-danger"
+                onClick={() => eliminarUsuario(user.id)}
+              >
+                Eliminar
+              </button>
+            </div>
+          </div>
         </div>
       </div>
+    ))
+  ) : (
+    <div className="col-12">
+      <div className="alert alert-info text-center">
+        No hay usuarios registrados.
+      </div>
     </div>
+  )}
+</div>
     {usuarioSeleccionado && (
       <ModalAdmin
         show={show}
