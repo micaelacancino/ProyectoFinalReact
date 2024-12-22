@@ -16,7 +16,7 @@ const Team = () => {
           <div className="info">
             <h2 className="name">Micaela Cancino</h2>
             <p className="description">Estudiante de ingenieria en sistemas de información, me gusta aprender idiomas y explorar las infinitas posibilidades que ofrece el mundo de la tecnología.</p>
-            <i class="bi bi-github " style={{color:"white"}}> <a href="https://github.com/micaelacancino/ProyectoFinalReact/commits?author=micaelacancino" className="role"> Perfil de Github</a> </i>
+            <i className="bi bi-github " style={{color:"white"}}> <a href="https://github.com/micaelacancino/ProyectoFinalReact/commits?author=micaelacancino" className="role"> Perfil de Github</a> </i>
           </div>
         </div>
         <div className="team-member">
@@ -26,7 +26,7 @@ const Team = () => {
           <div className="info">
             <h2 className="name">Enzo Perez</h2>
             <p className="description">Estudiante de programación en la UTN, me gustan los videojuegos, entrenar y la tecnología. También me gusta el asado los domingos y compartir con amigos.</p>
-            <i class="bi bi-github " style={{color:"white"}}> <a href="https://github.com/matperez01" className="role"> Perfil de Github</a> </i>
+            <i className="bi bi-github " style={{color:"white"}}> <a href="https://github.com/matperez01" className="role"> Perfil de Github</a> </i>
           </div>
         </div>
         <div className="team-member">
@@ -36,7 +36,7 @@ const Team = () => {
           <div className="info">
             <h2 className="name">Mariano Ocon</h2>
             <p className="description">Estudiante de Admin. de Empresas en la UNSTA, asistente ejecutivo en Develative y musico sesionista</p>
-            <i class="bi bi-github " style={{color:"white"}}> <a href="https://github.com/marianoocon  " className="role"> Perfil de Github</a> </i>
+            <i className="bi bi-github " style={{color:"white"}}> <a href="https://github.com/marianoocon  " className="role"> Perfil de Github</a> </i>
           </div>
         </div>
         <div className="team-member">
@@ -46,7 +46,7 @@ const Team = () => {
           <div className="info">
             <h2 className="name">Gerardo Salorzano</h2>
             <p className="description">Músico, violinista de la orquesta sinfónica de Salta. Me encanta el arte y siento que el universo de la programación es un arte de creatividad infinita.</p>
-            <i class="bi bi-github " style={{color:"white"}}>  <a href="https://github.com/gerardosolorzano-33" className="role"> Perfil de Github</a> </i>
+            <i className="bi bi-github " style={{color:"white"}}>  <a href="https://github.com/gerardosolorzano-33" className="role"> Perfil de Github</a> </i>
           </div>
         </div>
       </div>

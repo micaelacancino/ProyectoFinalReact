@@ -18,7 +18,7 @@ export const cursos = [
    descripcionBreve :
       " Este curso está diseñado para aquellos que desean iniciar su camino en el aprendizaje del idioma inglés.",
     duracion: "Duración: 30 clases | Modalidad: Online",
-    precio: "30.000",
+    precio:"30.000",
   },
 
   {
@@ -31,7 +31,7 @@ export const cursos = [
       "Comprende mejor el inglés hablado y pratica la pronunciación para conversar con eficiencia y fluidez.",
     duracion: "Duración: 32 clases | Modalidad: Online",
 
-    precio: "70.000",
+    precio:"70.000",
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ export const cursos = [
     descripcionBreve:
       "Da un paso adelante con tu inglés: Mejora la gramática, lectura, escucha, vocabulario y más.",
     duracion: "Duración: 37 clases | Modalidad: Online",
-    precio: "49.000",
+    precio:"49.000",
   },
   {
     id: 5,
@@ -53,7 +53,7 @@ export const cursos = [
     descripcionBreve:
       "Este curso está diseñado para aquellos que desean iniciar su camino en el aprendizaje del idioma francés.",
     duracion: "Duración: 20 clases | Modalidad: Online",
-    precio: "30.000",
+    precio:"30.000",
   },
 
   {
@@ -65,7 +65,7 @@ export const cursos = [
     descripcionBreve:
       "Comprende mejor el francés hablado y pratica la pronunciación para conversar con eficiencia y fluidez.",
     duracion: "Duración: 28 clases | Modalidad: Online",
-    precio: "70.000",
+    precio:"70.000",
   },
   {
     id: 7,
@@ -76,7 +76,7 @@ export const cursos = [
     descripcionBreve:
       "Da un paso adelante con tu francés:  Mejora la gramática, escucha, vocabulario y más..",
     duracion: "Duración: 37 clases | Modalidad: Online",
-    precio: "49.000",
+    precio:"49.000",
   },
   {
     id: 8,
@@ -88,7 +88,7 @@ export const cursos = [
       "Este curso está diseñado para aquellos que desean iniciar su camino en el aprendizaje del idioma inglés.",
     duracion: "Duración: 30 clases | Modalidad: Online",
 
-    precio: "30.000",
+    precio:"30.000",
   },
 
   {
@@ -101,7 +101,7 @@ export const cursos = [
       "Comprende mejor el italiano hablado y pratica la pronunciación para conversar con eficiencia y fluidez.",
     duracion: "Duración: 34 clases | Modalidad: Online",
 
-    precio: "70.000",
+    precio:"70.000",
   },
   {
     id: 10,
@@ -112,6 +112,6 @@ export const cursos = [
     descripcionBreve:
       "Da un paso adelante con tu italiano: Mejora la gramática, escucha, vocabulario y más..",
     duracion: "Duración: 36 clases | Modalidad: Online",
-    precio: "49.000",
+    precio:"49.000",
   },
 ];
