@@ -6,8 +6,8 @@ import mariano from '../assets/mariano.jpeg'
 const Team = () => {
   return (
     <div className="team-container">
-      <h1 className="team-title">Quiénes Somos</h1>
-      <p className="team-subtitle">Somos un equipo apasionado que trabaja para construir un mejor futuro en los idiomas.</p>
+      <h1 className="team-title titlePages my-4">Quiénes Somos</h1>
+      <h4 className="team-subtitle">Somos un equipo apasionado que trabaja para construir un mejor futuro en los idiomas.</h4>
       <div className="team-grid">
         <div className="team-member">
           <div className="photo-wrapper">

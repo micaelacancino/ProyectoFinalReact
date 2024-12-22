@@ -170,7 +170,7 @@ function Register() {
     
               <div className="text-center">
                 <button type="submit" className="btn btn-secondary w-100">
-                  Ingresar
+                  Crear cuenta
                 </button>       
               </div>
               <hr />

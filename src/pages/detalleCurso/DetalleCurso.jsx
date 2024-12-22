@@ -19,7 +19,7 @@ function DetalleCurso({
   const agregarCurso = () => {
     if (!usuarioLogueado) {
       Swal.fire({
-        position: "top-end",
+        position: "center",
         icon: "warning",
         title: "Debe iniciar sesion antes de añadir un curso al carrito",
         showConfirmButton: false,
@@ -34,7 +34,7 @@ function DetalleCurso({
       navegacion("/carrito");
     }
     Swal.fire({
-      position: "top-end",
+      position: "center",
       icon: "success",
       title: "Curso añadido al carrito correctamente",
       showConfirmButton: false,

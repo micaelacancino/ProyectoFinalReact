@@ -48,10 +48,10 @@ function NavBar({usuarioLogueado, setUsuarioLogueado}) {
                   </Link>
                 </li>
                 <li className="nav-item jost">
-                  <Link to={"*"} className="nav-link text-dark" href="">Nosotros</Link>
+                  <Link to={"/nosotros"} className="nav-link text-dark" href="">Nosotros</Link>
                 </li>
                 <li className="nav-item jost">
-                  <Link to={"*"} className="nav-link text-dark" href="">Planes</Link>
+                  <Link to={"*"} className="nav-link text-dark" href="">Certificaciones</Link>
                 </li>
                 <li className="nav-item jost">
                   <Link to={"*"} className="nav-link text-dark" href="">Contacto</Link>

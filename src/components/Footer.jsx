@@ -45,9 +45,9 @@ function Footer() {
                 </div>
                 <div className="col mb-3 mt-3">
                 <h5>Nuestras redes</h5>
-                <Link className="socialSize mx-1" to={"*"}><i className="bi bi-instagram text-dark"></i></Link>
-                <Link className="socialSize mx-1" to={"*"}><i className="bi bi-twitter text-dark"></i></Link>
-                <Link className="socialSize mx-1" to={"*"}><i className="bi bi-facebook text-dark"></i></Link>
+                <Link className="socialSize mx-1 fs-5" to={"*"}><i className="bi bi-instagram text-dark"></i></Link>
+                <Link className="socialSize mx-1 fs-5" to={"*"}><i className="bi bi-twitter text-dark"></i></Link>
+                <Link className="socialSize mx-1 fs-5" to={"*"}><i className="bi bi-facebook text-dark"></i></Link>
                 </div>
             </article>
             </section>

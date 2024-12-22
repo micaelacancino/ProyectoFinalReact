@@ -41,7 +41,7 @@ const Carrito = ({
     localStorage.removeItem("carrito")
     navegacion("/");
     Swal.fire({
-      position: "top-end",
+      position: "center",
       icon: "success",
       title: "Compra confirmada. Redirigiendo al pago...",
       showConfirmButton: false,

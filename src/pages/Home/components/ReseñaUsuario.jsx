@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ReseñaUsuario({ reseña }) {
+function ReseñaUsuario({ reseña}) {
   return (
     <div className="reseña-card text-center p-3 border rounded" style={{ width: '18rem' }}>
         

@@ -10,7 +10,16 @@ nav{
   font-weight:100px;
   font-style: normal;
   }
+ 
   .logohead{
-  width: 23vh;
-  height: 18vh;
-  }
+    width: 18vh;
+    height: 12vh;
+    }
+
+  @media all and (min-width:1024px){
+    .logohead{
+      width: 23vh;
+      height: 13vh;
+      }
+    
+}
