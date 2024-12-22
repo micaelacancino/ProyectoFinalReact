@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AR:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AR:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.864),
+      rgba(242, 242, 242, 0.56)
+    ),
+    url("https://img.freepik.com/vector-gratis/fondo-escuela-ingles-diseno-plano_23-2149487419.jpg")
+      no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+}
+
+.titlePages {
+  font-family: "Poppins", sans-serif;
+}
+
+.imgBanner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 750px;
+  object-fit: cover;
+}
+
+.descripcionBanner {
+  position: absolute;
+  width: 90%;
+  top:70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(235, 235, 235, 0.5);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.containerInfo {
+  max-width: 100%;
+  margin-top: 250px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.containerSubtitulo {
+  width: 100%;
+}
+
+.reseña-card {
+  background-color: white;
+}
+
+.cardCursos {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cardCursos:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.imgCard {
+  object-fit: cover;
+  height: 100%;
+  padding: 20px;
+}
+
+@media all and (min-width: 768px) {
+  .containerInfo {
+    margin-top: 50px;
+  }
+
+  .descripcionBanner {
+    top:75%;
+    left: 50%;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .descripcionBanner {
+    top: 65%;
+    left: 50%;
+  }
+}
