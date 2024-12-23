@@ -51,6 +51,11 @@ function Login({setUsuarioLogueado, usuarioLogueado}) {
     if (usuarioEncontrado) {
       sessionStorage.setItem("sesion", JSON.stringify(usuarioEncontrado));
       setUsuarioLogueado(usuarioEncontrado);
+      Swal.fire({
+        icon: 'success',
+        title: '¡Éxito!',
+        text: 'Bienvenido a SpeckMaster',
+      });
   
       navigate("/");
     } else {
