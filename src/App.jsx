@@ -20,6 +20,7 @@ import Nosotros from "./components/Nosotros.jsx";
 import Error from "./components/Error.jsx";
 
 
+
 function App() {
   const [cursosAlmacenados, setCursosAlmacenados] = useState([]);
   const [carrito, setCarrito] = useState([]);
@@ -87,7 +88,7 @@ function App() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/login" element={<Login usuarioLogueado={usuarioLogueado}  setUsuarioLogueado ={setUsuarioLogueado} /> } />
           <Route path="/registro" element={<Register />} /> 
-          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/nosotros" element={<Team />} />
           <Route path="/compras" element={<ComprasUsuarios compras={compras}  />} />
           <Route path="*" element={<Error/>} />
         </Routes>
