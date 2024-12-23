@@ -4,6 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import imagenregister from "../assets/img/imagenregister.webp";
 import { agregarUsuario, obtenerUsuarios } from '../database.js';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
@@ -226,12 +227,13 @@ function Register() {
               </div>
               <hr />
               <div> 
-                <button type="button" className="btn btn-outline-primary w-100">
-                  <i className="bi bi-facebook"></i> Registrarse con Facebook
-                </button>
-                <button type="button" className="btn btn-outline-danger w-100 mt-3">
-                  <i className="bi bi-google"></i> Registrase con Google
-                </button>
+             <Link to={"*"} type="button" className="btn btn-outline-primary w-100">
+                  <i className="bi bi-facebook" > Registrarse con Facebook</i> 
+                </Link>
+                
+                <Link to={"*"} type="button" className="btn btn-outline-danger w-100 mt-3">
+                  <i className="bi bi-google"> Registrarse con Facebook</i> 
+                </Link>
               </div>
                 </form>
               </div>
