@@ -57,14 +57,7 @@ function Register() {
       return; 
     }
 
-    if(!formulario.email=== "" || !formulario.usuario==="" || !formulario.email==="" || !formulario.contraseña || !formulario.confirmarContraseña ){
-      Swal.fire({
-        icon: 'error',
-        title: 'Algo salio mal',
-        text: 'Debe completar todos los campos',
-      });
-      return;
-    }
+
 
     if(usuarioExistente)
       {

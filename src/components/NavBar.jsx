@@ -66,7 +66,7 @@ function NavBar({usuarioLogueado, setUsuarioLogueado}) {
                   <Link to={"*"} className="nav-link text-dark" onClick={navLinkClick}>Certificaciones</Link>
                 </li>
                 <li className="nav-item jost">
-                <Link to={"/carrito"} className="nav-link text-dark" onClick={navLinkClick}><i class="bi bi-cart-fill"></i></Link>
+                <Link to={"/carrito"} className="nav-link text-dark" onClick={navLinkClick}><i className="bi bi-cart-fill"></i></Link>
                 </li>
                 {usuarioLogueado  && (
                   <li className="nav-item jost mx-2">
