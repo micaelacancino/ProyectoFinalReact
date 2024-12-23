@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/error404.css'
-function Error404() {
+
+function Error() {
   return (
     <div className="not-found-container my-5">
     <h1 className="error-code">404</h1>
@@ -10,4 +11,4 @@ function Error404() {
   )
 }
 
-export default Error404
+export default Error

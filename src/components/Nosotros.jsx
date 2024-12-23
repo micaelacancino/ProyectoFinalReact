@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react'
 import "../css/nosotros.css";
 import micaela from '../assets/micaela.jpeg'
 import enzo from '../assets/enzo.png'
 import mariano from '../assets/mariano.jpeg'
-const Team = () => {
+
+function Nosotros() {
   return (
     <div className="team-container">
       <h1 className="team-title titlePages my-4">Quiénes Somos</h1>
@@ -51,7 +52,7 @@ const Team = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Team;
+export default Nosotros
