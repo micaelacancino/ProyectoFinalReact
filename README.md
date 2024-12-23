@@ -28,7 +28,7 @@ Desarrollar una aplicación web que incluya las siguientes páginas:
 
 ## Deploy de la aplicación
 
-La aplicación está desplegada en Netlify. Puedes acceder haciendo clic en el siguiente enlace:
+La aplicación está desplegada en Vercel. Puedes acceder haciendo clic en el siguiente enlace:
 
 🔗 [Speak Master -](https://speakmaster.vercel.app/)
 
