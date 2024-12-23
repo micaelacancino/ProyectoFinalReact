@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -17,18 +17,30 @@ function Register() {
     check: false,
   });
 
-  
+  const[usuarios,setUsuarios] = useState([]);
 
+  useEffect(()=>{
+    const usuariosRegistrados = obtenerUsuarios()
+
+    setUsuarios(usuariosRegistrados);
+    
+  });
+ 
+  
+  
+  
   const handleChange =(e) =>{
     setFormulario({
       ...formulario,
       [e.target.name]: e.target.value === "check" ? e.target.checked : e.target.value,
     })
   }
-
+  
   const handleSubmit =(e) => {
     e.preventDefault();
-
+    
+    const usuarioExistente= usuarios.find((usuario)=>usuario.email === formulario.email)
+    
     if (
       !formulario.nombre.trim() ||
       !formulario.usuario.trim() ||
@@ -36,29 +48,65 @@ function Register() {
       !formulario.contraseña.trim() ||
       !formulario.confirmarContraseña.trim()
     ) {
-      alert("Debe completar todos los campos obligatorios.");
+      Swal.fire({
+        icon: 'error',
+        title: 'Algo salio mal',
+        text: 'Debe completar todos los campos',
+      });
       return; 
     }
 
     if(!formulario.email=== "" || !formulario.usuario==="" || !formulario.email==="" || !formulario.contraseña || !formulario.confirmarContraseña ){
-      alert("debe completar los campos obligatorios!")
+      Swal.fire({
+        icon: 'error',
+        title: 'Algo salio mal',
+        text: 'Debe completar todos los campos',
+      });
+      return;
     }
+
+    if(usuarioExistente)
+      {
+        Swal.fire({
+          icon: 'error',
+          title: 'Algo salio mal',
+          text: 'El correo ya esta en uso',
+        });
+        return;
+      }
+   
     
 
     if(formulario.contraseña.length < 5){
-      alert("la contraseña debe contener mas caracteres")
+      Swal.fire({
+        icon: 'error',
+        title: 'Algo salio mal',
+        text: 'La contraseña debe contener mas caracteres',
+      });
+      return;
     }
 
     if (formulario.contraseña !== formulario.confirmarContraseña) {
-      alert("Las contraseñas no coinciden.");
+      Swal.fire({
+        icon: 'error',
+        title: 'Algo salio mal',
+        text: 'Las contraseñas no coinciden',
+      });
+      return;
      
     }
 
     if(!formulario.check){
-      alert("Debe aceptar los terminos y condiciones!");
+      Swal.fire({
+        icon: 'error',
+        title: 'Algo salio mal',
+        text: 'Debe aceptar los terminos y condiciones',
+      });
+      return;
     }
     
     agregarUsuario(formulario);
+    
 
    
     Swal.fire({
@@ -66,8 +114,11 @@ function Register() {
           title: '¡Éxito!',
           text: 'Los datos se registraron correctamente.',
         });
+        return;
+       
   }
 
+  
   return (
     <>
           <section className="container my-5">
@@ -121,7 +172,7 @@ function Register() {
                
                 <label className="form-label">Correo Electronico </label>
                 <input
-                  type="text"
+                  type="email"
                   name="email"
                   className="casilla form-control"
                   placeholder="Correo@electronico.com"
