@@ -34,7 +34,7 @@ function FiltroCurso({ cursosAlmacenados }) {
       <div className="mb-5 text-center">
         <form>
           <input
-            className="w-50 rounded-2 px-2 py-2"
+            className="search rounded-2 px-2 py-2"
             type="text"
             required
             placeholder="Buscar cursos...🔍"

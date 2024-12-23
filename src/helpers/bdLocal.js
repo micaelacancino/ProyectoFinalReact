@@ -1,5 +1,5 @@
 import { cursos } from "./cursos";
-import { usuario } from "./usuario";
+
 
 export const obtenerCursos = () => {
   const cursosAlmacenados = JSON.parse(localStorage.getItem("cursos"));

@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import logo1 from "../assets/imagen1.png";
 import "../css/navbar.css";
 import { Link, useNavigate } from 'react-router-dom';
-import { usuario } from '../helpers/usuario';
+
 
 function NavBar({usuarioLogueado, setUsuarioLogueado}) {
  
+  const [desplegarNavbar, setDesplegarNavbar] = useState();
+
     const navigate = useNavigate(); 
     const handleLogout = () => {
         sessionStorage.removeItem("sesion");
@@ -14,7 +16,16 @@ function NavBar({usuarioLogueado, setUsuarioLogueado}) {
       };
     
  
+ const navLinkClick = () => {
+    setDesplegarNavbar(false)
+  };
 
+  const menuBTNClick = () =>{
+    setDesplegarNavbar(true);
+    if (desplegarNavbar == true) {
+      setDesplegarNavbar(false);
+    }
+  }
  
 
  
@@ -36,25 +47,26 @@ function NavBar({usuarioLogueado, setUsuarioLogueado}) {
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
               aria-label="Toggle navigation"
+              onClick={menuBTNClick}
             >
               <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div className="collapse navbar-collapse" id="menu">
+            <div   className={`collapse navbar-collapse ${desplegarNavbar ? "show" : ""}`} id="menu">
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item jost">
-                  <Link to={"/"} className="nav-link font text-dark" aria-current="page">
+                  <Link to={"/"} className="nav-link font text-dark" aria-current="page" onClick={navLinkClick}>
                     Inicio
                   </Link>
                 </li>
                 <li className="nav-item jost">
-                  <Link to={"/nosotros"} className="nav-link text-dark" href="">Nosotros</Link>
+                  <Link to={"/nosotros"} className="nav-link text-dark" onClick={navLinkClick}>Nosotros</Link>
                 </li>
                 <li className="nav-item jost">
-                  <Link to={"*"} className="nav-link text-dark" href="">Certificaciones</Link>
+                  <Link to={"*"} className="nav-link text-dark" onClick={navLinkClick}>Certificaciones</Link>
                 </li>
                 <li className="nav-item jost">
-                  <Link to={"*"} className="nav-link text-dark" href="">Contacto</Link>
+                  <Link to={"*"} className="nav-link text-dark" onClick={navLinkClick}>Contacto</Link>
                 </li>
                 {usuarioLogueado  && (
                   <li className="nav-item jost mx-2">
@@ -74,6 +86,7 @@ function NavBar({usuarioLogueado, setUsuarioLogueado}) {
                          to={"/login"}
                           type="button"
                           className="btn btn-info btn-lg mt-1"
+                          onClick={navLinkClick}
                        >
                           Iniciar Sesion
                         </Link>
@@ -83,6 +96,7 @@ function NavBar({usuarioLogueado, setUsuarioLogueado}) {
                           to={"/registro"}
                           type="button"
                           className="btn btn-info btn-lg mt-1"
+                          onClick={navLinkClick}
                         >
                           Registrarse
                        </Link>
