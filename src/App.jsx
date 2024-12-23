@@ -5,8 +5,7 @@ import Admin from "./components/Admin.jsx";
 import Register from "./components/Register.jsx";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
-import Error404 from "./components/Error404.jsx"
-import Nosotros from "./components/Team.jsx"
+
 import { useEffect, useState } from "react";
 import {
  
@@ -18,6 +17,8 @@ import Carrito from "./pages/carrito/Carrito";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ComprasUsuarios from "./components/ComprasUsuarios.jsx";
+import Error404 from "./components/Error404.jsx";
+import Team from "./components/Team.jsx";
 
 
 function App() {
@@ -87,7 +88,7 @@ function App() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/login" element={<Login usuarioLogueado={usuarioLogueado}  setUsuarioLogueado ={setUsuarioLogueado} /> } />
           <Route path="/registro" element={<Register />} /> 
-          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/nosotros" element={<Team />} />
           <Route path="/compras" element={<ComprasUsuarios compras={compras}  />} />
           <Route path="*" element={<Error404/>} />
         </Routes>
