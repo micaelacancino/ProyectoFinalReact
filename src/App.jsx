@@ -5,8 +5,8 @@ import Admin from "./components/Admin.jsx";
 import Register from "./components/Register.jsx";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
-import Error404 from "./components/Error404.jsx";
-import Nosotros from "./components/Team.jsx";
+import Error404 from "./components/Error404.jsx"
+import Nosotros from "./components/Team.jsx"
 import { useEffect, useState } from "react";
 import {
  
