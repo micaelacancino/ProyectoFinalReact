@@ -1,5 +1,5 @@
 import CursoCarrito from "./components/CursoCarrito";
-import "../Carrito/carrito.css";
+import "../carrito/carrito.css";
 import { useEffect } from "react";
 import { guardarCompras, obtenerCarrito } from "../../helpers/bdLocal";
 import { usuario } from "../../helpers/usuario";
