@@ -109,22 +109,21 @@ function Login({setUsuarioLogueado, usuarioLogueado}) {
                 <button type="submit" className="btn btn-secondary w-100">
                   Ingresar
                 </button>
-                <Link to={"/"} href="#" className="text-center d-block mt-2">¿Olvidaste tu contraseña?</Link>
+                <Link to={"*"}  className="text-center d-block mt-2">¿Olvidaste tu contraseña?</Link>
               </div>
 
               <hr />
 
               <div>
                 <p className="text-center">
-                  ¿Aún no tienes cuenta? <Link to={"/registro"} href="#">Regístrate aquí</Link>
+                  ¿Aún no tienes cuenta? <Link to={"/registro"} >Regístrate aquí</Link>
                 </p>
-
-                <button type="button" className="btn btn-outline-primary w-100">
-                  <i className="bi bi-facebook m-1 mt-1">Iniciar sesión con Facebook</i> 
-                </button>
-                <button type="button" className="btn btn-outline-danger w-100 mt-3">
-                  <i className="bi bi-google m-1 mt-1">Iniciar sesión con Google</i> 
-                </button>
+                <Link to={"*"} type="button" className="btn btn-outline-primary w-100">
+                  <i className="bi bi-facebook" > Iniciar Sesion con Facebook</i> 
+                </Link>
+                <Link to={"*"} type="button" className="btn btn-outline-danger w-100 mt-3">
+                  <i className="bi bi-google"> Iniciar Sesion con Facebook</i> 
+                </Link>
               </div>
             </form>
           </div>
