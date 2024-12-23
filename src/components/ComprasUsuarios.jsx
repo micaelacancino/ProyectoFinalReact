@@ -13,7 +13,6 @@ function ComprasUsuarios({compras}) {
       >
         <thead>
           <tr className='text-center'>
-            <th>Id</th>
             <th>Usuario</th>
             <th>Cursos</th>
             <th>Total</th>
@@ -23,7 +22,7 @@ function ComprasUsuarios({compras}) {
         <tbody className='text-center'>
           {compras.map((compra) => (
             <ItemCompra
-              key={compra._id}
+              key={compra.id}
               compra={compra}
             />
           ))}

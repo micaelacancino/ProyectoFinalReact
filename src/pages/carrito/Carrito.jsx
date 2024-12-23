@@ -2,7 +2,6 @@ import CursoCarrito from "./components/CursoCarrito";
 import "../carrito/carrito.css";
 import { useEffect } from "react";
 import { guardarCompras, obtenerCarrito } from "../../helpers/bdLocal";
-import { usuario } from "../../helpers/usuario";
 import { Navigate, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 

@@ -66,6 +66,10 @@ body {
   padding: 20px;
 }
 
+.search{
+  width: 100%;
+}
+
 @media all and (min-width: 768px) {
   .containerInfo {
     margin-top: 50px;
@@ -74,6 +78,9 @@ body {
   .descripcionBanner {
     top:75%;
     left: 50%;
+  }
+  .search{
+    width: 50%;
   }
 }
 
