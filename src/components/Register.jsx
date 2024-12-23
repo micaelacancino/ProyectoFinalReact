@@ -4,11 +4,12 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import imagenregister from "../assets/img/imagenregister.webp";
 import { agregarUsuario, obtenerUsuarios } from '../database.js';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 
 function Register() {
+  const navigate = useNavigate(); 
   const [formulario, setFormulario ] = useState({ 
     nombre: "",
     usuario: "",
@@ -108,6 +109,7 @@ function Register() {
     
     agregarUsuario(formulario);
     
+    
 
    
     Swal.fire({
@@ -115,6 +117,7 @@ function Register() {
           title: '¡Éxito!',
           text: 'Los datos se registraron correctamente.',
         });
+        navigate("/login")
         return;
        
   }
