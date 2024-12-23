@@ -30,7 +30,7 @@ Desarrollar una aplicación web que incluya las siguientes páginas:
 
 La aplicación está desplegada en Netlify. Puedes acceder haciendo clic en el siguiente enlace:
 
-🔗 [Speak Master -](AquiVaElLINK)
+🔗 [Speak Master -](https://speakmaster.vercel.app/)
 
 
 ## Tecnologías utilizadas
