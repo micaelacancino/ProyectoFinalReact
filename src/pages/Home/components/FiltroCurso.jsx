@@ -29,10 +29,16 @@ function FiltroCurso({ cursosAlmacenados }) {
     filtrarCursosPorNombre();
   }, [busqueda]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    filtrarCursosPorNombre(); 
+  };
+
+
   return (
     <>
       <div className="mb-5 text-center">
-        <form>
+        <form onSubmit={handleSubmit}>
           <input
             className="search rounded-2 px-2 py-2"
             type="text"
