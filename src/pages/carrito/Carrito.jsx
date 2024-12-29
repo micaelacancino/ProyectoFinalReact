@@ -36,8 +36,8 @@ const Carrito = ({
     comprasAux.push(nuevaCompra);
     setCompras(comprasAux);
     guardarCompras(compras);
-    setCarrito([])
-    localStorage.removeItem("carrito")
+    setCarrito([]);
+    localStorage.removeItem("carrito");
     navegacion("/");
     Swal.fire({
       position: "center",
@@ -49,9 +49,28 @@ const Carrito = ({
   };
 
   const eliminarCurso = (id) => {
-    const nuevoCarrito = carrito.filter(curso => curso.id !== id);
-    setCarrito(nuevoCarrito);
-    localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
+    Swal.fire({
+      title: "¿Estás seguro de que quieres eliminar este curso?",
+
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sí, eliminar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const nuevoCarrito = carrito.filter((curso) => curso.id !== id);
+        setCarrito(nuevoCarrito);
+        localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
+
+        Swal.fire({
+          title: "Eliminado",
+          text: "El curso fue eliminado del carrito.",
+          icon: "success",
+        });
+      }
+    });
   };
   return (
     <section className="py-5 container">
@@ -60,12 +79,18 @@ const Carrito = ({
       </div>
       <div className="row gy-2">
         <div className="col-lg-9">
-          <p className="text-start border-bottom titlePages  fs-4">Cursos añadidos:</p>
+          <p className="text-start border-bottom titlePages  fs-4">
+            Cursos añadidos:
+          </p>
           {carrito.length === 0 && <p>No se añadieron cursos al carrito</p>}
 
-          <article className="px-2 py-4 p-md-4 d-flex flex-column gap-4 rounded-4">
+          <article className="px-2 py-4 p-md-4 d-flex flex-column gap-4 rounded-4 ">
             {carrito.map((c) => (
-              <CursoCarrito key={c.id} curso={c} eliminarCurso={eliminarCurso} ></CursoCarrito>
+              <CursoCarrito
+                key={c.id}
+                curso={c}
+                eliminarCurso={eliminarCurso}
+              ></CursoCarrito>
             ))}
           </article>
         </div>
