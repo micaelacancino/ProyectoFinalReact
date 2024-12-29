@@ -21,7 +21,7 @@ function DetalleCurso({
       Swal.fire({
         position: "center",
         icon: "warning",
-        title: "Debe iniciar sesion antes de añadir un curso al carrito",
+        title: "Debe iniciar sesión antes de añadir un curso al carrito",
         showConfirmButton: false,
         timer: 3500,
       });
@@ -31,15 +31,22 @@ function DetalleCurso({
       const carritoActual = agregarCursoCarrito(curso, carritoAux);
       setCarrito(carritoActual);
       guardarCarrito(carritoActual);
-      navegacion("/carrito");
+
+      Swal.fire({
+        title: "Curso añadido al carrito",
+        text: "¿Qué deseas hacer ahora?",
+        icon: "success",
+        showCancelButton: true,
+        confirmButtonText: "Ir al carrito",
+        cancelButtonText: "Seguir comprando",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navegacion("/carrito");
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          navegacion("/");
+        }
+      });
     }
-    Swal.fire({
-      position: "center",
-      icon: "success",
-      title: "Curso añadido al carrito correctamente",
-      showConfirmButton: false,
-      timer: 1500,
-    });
   };
 
   return (
