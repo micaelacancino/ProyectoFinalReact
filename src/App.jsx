@@ -18,6 +18,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ComprasUsuarios from "./components/ComprasUsuarios.jsx";
 import Nosotros from "./components/Nosotros.jsx";
 import Error from "./components/Error.jsx";
+import ScrollTop from "./common/ScrollTop.jsx";
 
 
 
@@ -57,7 +58,10 @@ function App() {
 
       <Router>
         <NavBar usuarioLogueado ={usuarioLogueado} setUsuarioLogueado ={setUsuarioLogueado} /> 
+        <ScrollTop/>
         <Routes>
+    
+          
           <Route
             path="/"
             element={<HomePage cursosAlmacenados={cursosAlmacenados} />}
@@ -85,6 +89,7 @@ function App() {
               ></Carrito>
             }
           />
+       
           <Route path="/admin" element={<Admin />} />
           <Route path="/login" element={<Login usuarioLogueado={usuarioLogueado}  setUsuarioLogueado ={setUsuarioLogueado} /> } />
           <Route path="/registro" element={<Register />} /> 
