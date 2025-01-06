@@ -27,7 +27,7 @@ body {
 .descripcionBanner {
   position: absolute;
   width: 90%;
-  top:65%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(235, 235, 235, 0.5);
@@ -66,8 +66,50 @@ body {
   padding: 20px;
 }
 
-.search{
+.search {
   width: 100%;
+}
+@media all and (min-width: 360px) {
+  .containerInfo {
+    margin-top: 250px;
+  }
+
+  .descripcionBanner {
+    top: 70%;
+    left: 50%;
+  }
+}
+
+@media all and (min-width: 365px) {
+  .containerInfo {
+    margin-top: 250px;
+  }
+
+  .descripcionBanner {
+    top: 80%;
+    left: 50%;
+  }
+}
+@media all and (min-width: 390px) {
+  .containerInfo {
+    margin-top: 250px;
+  }
+
+  .descripcionBanner {
+    top: 65%;
+    left: 50%;
+  }
+}
+
+@media all and (min-width: 414px) {
+  .containerInfo {
+    margin-top: 250px;
+  }
+
+  .descripcionBanner {
+    top: 62%;
+    left: 50%;
+  }
 }
 
 @media all and (min-width: 768px) {
@@ -76,20 +118,18 @@ body {
   }
 
   .descripcionBanner {
-    top:75%;
+    top: 75%;
     left: 50%;
   }
-  .search{
+  .search {
     width: 50%;
   }
 }
 @media all and (min-width: 820px) {
-
   .containerInfo {
     margin-top: 350px;
   }
 }
-
 
 @media all and (min-width: 1024px) {
   .descripcionBanner {

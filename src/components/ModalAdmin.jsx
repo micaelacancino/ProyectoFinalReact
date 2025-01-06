@@ -1,17 +1,18 @@
-import { useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import { useState, useEffect } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import Swal from "sweetalert2";
 
 function ModalAdmin({ show, handleClose, usuario, actualizarUsuario }) {
   const [formulario, setFormulario] = useState({
-    nombre: '',
-    usuario: '',
-    email: '',
+    nombre: "",
+    usuario: "",
+    email: "",
   });
 
   useEffect(() => {
     if (usuario) {
-      setFormulario(usuario); // Rellena el formulario con los datos del usuario seleccionado
+      setFormulario(usuario);
     }
   }, [usuario]);
 
@@ -22,9 +23,53 @@ function ModalAdmin({ show, handleClose, usuario, actualizarUsuario }) {
     });
   };
 
+  const validarFormulario = () => {
+    const nombreRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!formulario.nombre.trim() || !nombreRegex.test(formulario.nombre)) {
+      Swal.fire({
+        icon: "error",
+        title: "Algo salió mal",
+        text: "El nombre solo puede contener letras y espacios.",
+      });
+      return false;
+    }
+
+    if (!formulario.email.trim() || !emailRegex.test(formulario.email)) {
+      Swal.fire({
+        icon: "error",
+        title: "Algo salió mal",
+        text: "Por favor ingrese un correo electrónico válido.",
+      });
+      return false;
+    }
+
+    if (!formulario.usuario.trim()) {
+      Swal.fire({
+        icon: "error",
+        title: "Algo salió mal",
+        text: "El campo de usuario no puede estar vacío.",
+      });
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    actualizarUsuario(formulario); // Actualiza el usuario en la lista y localStorage
+
+    if (!validarFormulario()) {
+      return;
+    }
+
+    actualizarUsuario(formulario);
+    Swal.fire({
+      icon: "success",
+      title: "Éxito",
+      text: "Usuario actualizado correctamente.",
+    });
     handleClose();
   };
 
@@ -37,13 +82,12 @@ function ModalAdmin({ show, handleClose, usuario, actualizarUsuario }) {
         <form onSubmit={handleSubmit}>
           <label className="form-label">Correo Electrónico</label>
           <input
-            type="text"
+            type="email"
             name="email"
             className="form-control"
             placeholder="Correo@electronico.com"
             value={formulario.email}
             onChange={handleChange}
-       
           />
           <label className="form-label">Usuario</label>
           <input

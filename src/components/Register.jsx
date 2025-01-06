@@ -43,6 +43,16 @@ function Register() {
     
     const usuarioExistente= usuarios.find((usuario)=>usuario.email === formulario.email)
     
+    const nombreRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+    if (!nombreRegex.test(formulario.nombre)) {
+      Swal.fire({
+        icon: "error",
+        title: "Algo salió mal",
+        text: "El nombre solo puede contener letras y espacios.",
+      });
+      return;
+    }
+
     if (
       !formulario.nombre.trim() ||
       !formulario.usuario.trim() ||
@@ -127,6 +137,7 @@ function Register() {
                   src={imagenregister}
                   alt="imagen de un chico y una chica ingresando al mundo de los cursos"
                   className="imgRegistro rounded-4 img-fluid"
+                  style={{height:"80vh"}}
                 />
               </div>
     
