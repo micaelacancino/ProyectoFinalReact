@@ -76,7 +76,7 @@ function Login({setUsuarioLogueado, usuarioLogueado}) {
               src={imagenlogin}
               alt="imagen de un chico y una chica ingresando al mundo de los cursos"
               className="imgRegistro  img-fluid"
-              style={{height:"90vh"}}
+              style={{height:"70vh"}}
             />
           </div>
 
