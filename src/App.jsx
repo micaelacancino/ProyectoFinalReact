@@ -6,12 +6,7 @@ import Register from "./components/Register.jsx";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import { useEffect, useState } from "react";
-import {
- 
-  obtenerCompras,
-  obtenerCursos,
-  
-} from "./helpers/bdLocal";
+import { obtenerCompras, obtenerCursos } from "./helpers/bdLocal";
 import Carrito from "./pages/carrito/Carrito";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -19,8 +14,6 @@ import ComprasUsuarios from "./components/ComprasUsuarios.jsx";
 import Nosotros from "./components/Nosotros.jsx";
 import Error from "./components/Error.jsx";
 import ScrollTop from "./common/ScrollTop.jsx";
-
-
 
 function App() {
   const [cursosAlmacenados, setCursosAlmacenados] = useState([]);
@@ -36,32 +29,28 @@ function App() {
     setCompras(comprasGuardados);
   }, []);
 
-
-
-  useEffect(()=>{
+  useEffect(() => {
     checkSession();
   }, []);
 
-   const checkSession = () => {
-      const sesionGuardada = sessionStorage.getItem("sesion");
-      if (sesionGuardada) {
-        setUsuarioLogueado(JSON.parse(sesionGuardada));
-      } else {
-        setUsuarioLogueado(null);
-      }
-    };
-
-    
+  const checkSession = () => {
+    const sesionGuardada = sessionStorage.getItem("sesion");
+    if (sesionGuardada) {
+      setUsuarioLogueado(JSON.parse(sesionGuardada));
+    } else {
+      setUsuarioLogueado(null);
+    }
+  };
 
   return (
     <>
-
       <Router>
-        <NavBar usuarioLogueado ={usuarioLogueado} setUsuarioLogueado ={setUsuarioLogueado} /> 
-        <ScrollTop/>
+        <NavBar
+          usuarioLogueado={usuarioLogueado}
+          setUsuarioLogueado={setUsuarioLogueado}
+        />
+        <ScrollTop />
         <Routes>
-    
-          
           <Route
             path="/"
             element={<HomePage cursosAlmacenados={cursosAlmacenados} />}
@@ -89,15 +78,26 @@ function App() {
               ></Carrito>
             }
           />
-       
+
           <Route path="/admin" element={<Admin />} />
-          <Route path="/login" element={<Login usuarioLogueado={usuarioLogueado}  setUsuarioLogueado ={setUsuarioLogueado} /> } />
-          <Route path="/registro" element={<Register />} /> 
+          <Route
+            path="/login"
+            element={
+              <Login
+                usuarioLogueado={usuarioLogueado}
+                setUsuarioLogueado={setUsuarioLogueado}
+              />
+            }
+          />
+          <Route path="/registro" element={<Register />} />
           <Route path="/nosotros" element={<Nosotros />} />
-          <Route path="/compras" element={<ComprasUsuarios compras={compras}  />} />
-          <Route path="*" element={<Error/>} />
+          <Route
+            path="/compras"
+            element={<ComprasUsuarios compras={compras} />}
+          />
+          <Route path="*" element={<Error />} />
         </Routes>
-        <Footer /> 
+        <Footer />
       </Router>
     </>
   );
