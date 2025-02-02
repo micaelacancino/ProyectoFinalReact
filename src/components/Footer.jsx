@@ -11,11 +11,11 @@ function Footer() {
     <div>
         <footer className="colorFooter" id="footer">
             <section className="container-fluid text-center">
-            <article className="row row-cols-1 row-cols-md-4 my-4 my-md-3 pt-md-4 ">
+            <article className="row row-cols-1 row-cols-md-4">
                 <div className="col-sm-12 col-md-3  mb-md-0">
                 <Link to={"/"}><img className="logoSize" src={logo2} alt="SpeakMaster" /></Link>
                 </div>
-                <div className="col mb-3 mt-3 ">
+                <div className="col  mt-5 ">
                 <h5 className="text-dark">Nosotros</h5>
                 <ul className="list-unstyled flex-md-column">
                     <li>
@@ -29,7 +29,7 @@ function Footer() {
                     </li>
                 </ul>
                 </div>
-                <div className="col mb-3 mt-3">
+                <div className="col  mt-5 ">
                 <h5 className="text-dark">Nuestras Páginas</h5>
                 <ul className="list-unstyled flex-md-column">
                     <li>
@@ -43,11 +43,11 @@ function Footer() {
                     </li>
                 </ul>
                 </div>
-                <div className="col mb-3 mt-3">
+                <div className="col  mt-5 ">
                 <h5>Nuestras redes</h5>
-                <Link className="socialSize mx-1 fs-5" to={"*"}><i className="bi bi-instagram text-dark"></i></Link>
-                <Link className="socialSize mx-1 fs-5" to={"*"}><i className="bi bi-twitter text-dark"></i></Link>
-                <Link className="socialSize mx-1 fs-5" to={"*"}><i className="bi bi-facebook text-dark"></i></Link>
+                <Link className="socialSize mx-1 fs-5" target="_blank" to={"*"}><i className="bi bi-instagram text-dark"></i></Link>
+                <Link className="socialSize mx-1 fs-5" target="_blank" to={"*"}><i className="bi bi-twitter text-dark"></i></Link>
+                <Link className="socialSize mx-1 fs-5" target="_blank" to={"*"}><i className="bi bi-facebook text-dark"></i></Link>
                 </div>
             </article>
             </section>

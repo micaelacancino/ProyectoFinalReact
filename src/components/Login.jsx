@@ -122,7 +122,7 @@ function Login({setUsuarioLogueado, usuarioLogueado}) {
                   <i className="bi bi-facebook" > Iniciar Sesion con Facebook</i> 
                 </Link>
                 <Link to={"*"} type="button" className="btn btn-outline-danger w-100 mt-3">
-                  <i className="bi bi-google"> Iniciar Sesion con Facebook</i> 
+                  <i className="bi bi-google"> Iniciar Sesion con Google</i> 
                 </Link>
               </div>
             </form>

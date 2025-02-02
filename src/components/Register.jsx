@@ -239,7 +239,7 @@ function Register() {
                 </Link>
                 
                 <Link to={"*"} type="button" className="btn btn-outline-danger w-100 mt-3">
-                  <i className="bi bi-google"> Registrarse con Facebook</i> 
+                  <i className="bi bi-google"> Registrarse con Google</i> 
                 </Link>
               </div>
                 </form>

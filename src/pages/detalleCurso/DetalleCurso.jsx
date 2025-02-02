@@ -104,7 +104,7 @@ function DetalleCurso({
         </article>
       </div>
 
-      <div className="container mt-5">
+      <div className="container mt-5 mb-4">
         <div className="card p-4 shadow-sm">
           <h2 className="fw-bold mb-4">Lo que aprenderás</h2>
 
