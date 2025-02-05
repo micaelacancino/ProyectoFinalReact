@@ -86,7 +86,7 @@ function Register() {
       Swal.fire({
         icon: 'error',
         title: 'Algo salio mal',
-        text: 'La contraseña debe contener mas caracteres',
+        text: 'La contraseña debe contener por lo menos 5 caracteres',
       });
       return;
     }
