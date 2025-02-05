@@ -8,7 +8,7 @@ import FiltroCurso from "./components/FiltroCurso";
 function HomePage({cursosAlmacenados} ) {
   
   return (
-    <section className="d-flex flex-column ">
+    <section className="d-flex flex-column mainSection">
       <BannerHome></BannerHome>
       <div className="container containerInfo mb-5">
         <article className="row justify-content-center mt-5">

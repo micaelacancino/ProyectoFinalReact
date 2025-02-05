@@ -128,7 +128,7 @@ function Register() {
   
   return (
     <>
-          <section className="container my-5">
+          <section className="container my-5 mainSection">
             
             
             <article className="row">

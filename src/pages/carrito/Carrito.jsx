@@ -73,7 +73,8 @@ const Carrito = ({
     });
   };
   return (
-    <section className="py-5 container">
+    <section className="py-5 container mainSection">
+      
       <div className="pt-lg-5 pb-2 pb-md-4">
         <h1 className="text-start titlePages">Carrito</h1>
       </div>

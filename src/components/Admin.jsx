@@ -51,7 +51,7 @@ function Admin() {
 
   return (
     <>
-      <div className="container my-5">
+      <div className="container my-5 mainSection">
         <div className="d-flex align-items-center justify-content-between">
           <h1 className="text-center mb-4">Lista de Usuarios Registrados</h1>
           <Link className="btn btn-info" to={"/compras"}>Ver compras</Link>
