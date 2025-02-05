@@ -69,7 +69,7 @@ function Login({setUsuarioLogueado, usuarioLogueado}) {
 
   return (
     <>
-      <section className="container my-5">
+      <section className="container my-5 mainSection">
         <article className="row">
           <div className="d-none d-lg-block col-lg-6 ">
             <img

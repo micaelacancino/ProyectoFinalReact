@@ -14,6 +14,7 @@ import ComprasUsuarios from "./components/ComprasUsuarios.jsx";
 import Nosotros from "./components/Nosotros.jsx";
 import Error from "./components/Error.jsx";
 import ScrollTop from "./common/ScrollTop.jsx";
+import "../src/App.css"
 
 function App() {
   const [cursosAlmacenados, setCursosAlmacenados] = useState([]);

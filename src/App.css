@@ -1,6 +1,28 @@
+body {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.864),
+        rgba(242, 242, 242, 0.56)
+      ),
+      url("https://img.freepik.com/vector-gratis/fondo-escuela-ingles-diseno-plano_23-2149487419.jpg")
+        no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .titlePages {
+    font-family: "Poppins", sans-serif;
+  }
 
 
+  #root {
 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
+  .mainSection{
+    flex-grow: 1;
+  }
 
 

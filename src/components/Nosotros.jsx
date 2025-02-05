@@ -6,7 +6,7 @@ import mariano from '../assets/mariano.jpeg';
 
 function Nosotros() {
   return (
-    <div className="team-container">
+    <div className="team-container mainSection">
       <h1 className="team-title titlePages my-4">Quiénes Somos</h1>
       <h4 className="team-subtitle">Somos un equipo apasionado que trabaja para construir un mejor futuro en los idiomas.</h4>
       <div className="team-grid">

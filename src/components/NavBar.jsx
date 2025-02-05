@@ -17,6 +17,10 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
     setDesplegarNavbar((prev) => !prev);
   };
 
+  const handleAdmin = () => {
+    navigate("/Admin");
+  };
+
   const closeNavbar = () => {
     setDesplegarNavbar(false);
   };
@@ -28,15 +32,13 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
           <img src={logo1} alt="logo-speakMaster" className="logohead" />
         </Link>
 
-        <button
-          className="navbar-toggler"
-          type="button"
-          onClick={toggleNavbar}
-        >
+        <button className="navbar-toggler" type="button" onClick={toggleNavbar}>
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className={`navbar-collapse ${desplegarNavbar ? "show" : "collapse"}`}>
+        <div
+          className={`navbar-collapse ${desplegarNavbar ? "show" : "collapse"}`}
+        >
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link to={"/"} className="nav-link fw-bold" onClick={closeNavbar}>
@@ -44,7 +46,11 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"/nosotros"} className="nav-link fw-bold" onClick={closeNavbar}>
+              <Link
+                to={"/nosotros"}
+                className="nav-link fw-bold"
+                onClick={closeNavbar}
+              >
                 Nosotros
               </Link>
             </li>
@@ -58,8 +64,18 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
                 <i className="bi bi-cart-fill"></i>
               </Link>
             </li>
+            {usuarioLogueado?.rol == "admin" && (
+              <button
+                type="button"
+                className="btn btn-secondary me-2"
+                onClick={handleAdmin}
+              >
+                Admin
+              </button>
+            )}
+
             {usuarioLogueado ? (
-              <li className="nav-item ">
+              <li className="nav-item d-flex align-items-center">
                 <button
                   type="button"
                   className="btn btn-danger"
@@ -101,5 +117,3 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
 }
 
 export default NavBar;
-
-

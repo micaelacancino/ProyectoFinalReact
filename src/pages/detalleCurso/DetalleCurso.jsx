@@ -50,7 +50,7 @@ function DetalleCurso({
   };
 
   return (
-    <section className="container">
+    <section className="container mainSection">
       <div className="container mt-5">
         <article className="row align-items-center">
           <div className="col-12 col-md-8 text-center text-md-start">
